@@ -1,6 +1,5 @@
-## Originally created by Class of 2019 C-UAS Capstone Team orignal file name (capstone2018_sensor_fusion2.py)
-##Modified by C1C Ryan Schneider C/O 2021 Spring 2021
-
+# Originally created by Class of 2019 C-UAS Capstone Team orignal file name (capstone2018_sensor_fusion2.py)
+# Modified by C1C Ryan Schneider C/O 2021 Spring 2021
 
 
 from collections import namedtuple
@@ -9,8 +8,9 @@ import array
 import numpy as np
 from time import sleep
 import utm
-import datetime
-import pytz
+
+# import datetime
+# import pytz
 
 radar_estimate_struct = namedtuple("radar_estimate_struct", "time_unix_epoch_sec range_m az_deg el_deg pos_lat_deg"
                                                             "pos_long_deg pos_elev_m tar_lat_deg tar_long_deg"
@@ -29,31 +29,31 @@ radar_estimate = radar_estimate_struct
 acoustic_azymuth_left = 0.0
 acoustic_azymuth_right = 0.0
 filter_exists = False
-
 shared_memory = None
 
 # t1 = Timer(100, refresh())
 
 message_length = 80
 
+
 def generate_new_filter_radar(radarMeasurment):  # name for radar message is radar_message
     current_state = state
 
-    current_state.X = np.zeros((6,1))
+    current_state.X = np.zeros((6, 1))
 
-    #current_state.X[0] = radar_meas.range_m * math.cos(radar_meas.el_deg * deg2rad) * math.sin(
-        #radar_meas.az_deg * deg2rad)
+    # current_state.X[0] = radar_meas.range_m * math.cos(radar_meas.el_deg * deg2rad) * math.sin(
+    # radar_meas.az_deg * deg2rad)
     current_state.X[0] = radarMeasurment[1]
 
     # y pos
-    #current_state.X[1] = radar_meas.range_m * math.cos(radar_meas.el_deg * deg2rad) * math.cos(radar_meas.az_deg
+    # current_state.X[1] = radar_meas.range_m * math.cos(radar_meas.el_deg * deg2rad) * math.cos(radar_meas.az_deg
     # * deg2rad)
     current_state.X[2] = radarMeasurment[2]
     # z pos
-    #current_state.X[2] = radar_meas.range_m * math.sin(radar_meas.el_deg * deg2rad)
+    # current_state.X[2] = radar_meas.range_m * math.sin(radar_meas.el_deg * deg2rad)
     current_state.X[3] = radarMeasurment[3]
 
-    #print(current_state.X[3])
+    # print(current_state.X[3])
     # x velocity
     current_state.X[3] = radarMeasurment[4]
     # y velocity
@@ -75,18 +75,17 @@ def generate_new_filter_radar(radarMeasurment):  # name for radar message is rad
     # Vz variance
     current_state.P[5, 5] = 1
 
-    #current_state.current_time = radar_meas.time_unix_epoch_sec
+    # current_state.current_time = radar_meas.time_unix_epoch_sec
     current_state.current_time = radarMeasurment[0]
-    #print(current_state.current_time)
-    #print(current_state.P)
+    # print(current_state.current_time)
+    # print(current_state.P)
     return current_state
-
 
 
 def generate_new_filter_acoustic(acoustic_meas):  # name for radar message is radar_message
     current_state = state
 
-    current_state.X = np.zeros((6,1))
+    current_state.X = np.zeros((6, 1))
 
     current_state.X[0] = acoustic_meas[1]
 
@@ -120,17 +119,16 @@ def generate_new_filter_acoustic(acoustic_meas):  # name for radar message is ra
     return current_state
 
 
-
 def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
-    cur_format ="{:.10f}".format(cur_r[0])
+    cur_format = "{:.10f}".format(cur_r[0])
     measTime = float(cur_format)
     stateTime_format = "{:.10f}".format(tmp_state.current_time)
     stateTime = float(stateTime_format)
     dt = measTime - stateTime
     time_format = "{:.10f}".format(dt)
     dt = float(time_format)
-    #print(tmp_state.current_time)
-    #dt = measurement.last_radar_message - tmp_state.current_time
+    # print(tmp_state.current_time)
+    # dt = measurement.last_radar_message - tmp_state.current_time
     weight = 0.1
     dt2 = weight * dt * dt
     dt3 = weight * 0.5 * dt * dt * dt
@@ -141,17 +139,16 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
     tmp_state.current_time = measTime
     tar_pos = np.zeros((3, 1))
 
-
-    if measFlag == True:
-    # Convert from spherical to rectangular coordinates
-    # x pos
-    #tar_pos[0][0] = cur_r.range_m * math.cos(cur_r.el_deg * deg2rad) * math.sin(cur_r.az_deg * deg2rad)
+    if measFlag:
+        # Convert from spherical to rectangular coordinates
+        # x pos
+        # tar_pos[0][0] = cur_r.range_m * math.cos(cur_r.el_deg * deg2rad) * math.sin(cur_r.az_deg * deg2rad)
         tar_pos[0][0] = cur_r[1]
-    # y pos
-    #tar_pos[1][0] = cur_r.range_m * math.cos(cur_r.el_deg * deg2rad) * math.cos(cur_r.az_deg * deg2rad)
+        # y pos
+        # tar_pos[1][0] = cur_r.range_m * math.cos(cur_r.el_deg * deg2rad) * math.cos(cur_r.az_deg * deg2rad)
         tar_pos[1][0] = cur_r[2]
-    # z pos
-    #tar_pos[2][0] = cur_r.range_m * math.sin(cur_r.el_deg * deg2rad)
+        # z pos
+        # tar_pos[2][0] = cur_r.range_m * math.sin(cur_r.el_deg * deg2rad)
         tar_pos[2][0] = cur_r[3]
     # print("Tar pos", tar_pos)
     # Propagate in time
@@ -165,10 +162,10 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
     phi_mat = phi1
     # print("Before: ", tmp_state.X)
     # Propagate states
-    #print(tmp_state.X)
-    #tmp_state.X = np.dot(phi_mat, tmp_state.X)
+    # print(tmp_state.X)
+    # tmp_state.X = np.dot(phi_mat, tmp_state.X)
     tmp_state.X = phi_mat @ tmp_state.X
-    #print(tmp_state.X)
+    # print(tmp_state.X)
     # print("After: ", tmp_state.X)
     # print("dt: ", dt)
     wgamma1 = np.array([[dt4, 0.0, 0.0, dt3, 0.0, 0.0],
@@ -204,8 +201,8 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
     h[2][0] = z
 
     h_tmp = np.array([[1.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-             [0.0, 1.0, 0.0, 0.0, 0.0, 0.0],
-             [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]])
+                      [0.0, 1.0, 0.0, 0.0, 0.0, 0.0],
+                      [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]])
     H = h_tmp
 
     # v
@@ -217,17 +214,19 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
     # R
     v[2, 2] = 5
 
-
-    if measFlag == True:
+    if measFlag:
         # Calculate Kalman gain
-        k = np.dot(np.dot(tmp_state.P, np.transpose(H)), np.linalg.inv(np.add(np.dot(np.dot(H, tmp_state.P), np.transpose(H)), v)))
+        k = np.dot(np.dot(tmp_state.P, np.transpose(H)),
+                   np.linalg.inv(np.add(np.dot(np.dot(H, tmp_state.P), np.transpose(H)), v)))
         # print("Kalman gain")
         # print(k)
 
         i = np.identity(6)
 
         # Update covariance matrix
-        tmp_state.P = np.add(np.dot(np.dot(np.subtract(i, np.dot(k , H)), tmp_state.P), np.transpose(np.subtract(i, np.dot(k, H)))), np.dot(np.dot(k, v), np.transpose(k)))
+        tmp_state.P = np.add(
+            np.dot(np.dot(np.subtract(i, np.dot(k, H)), tmp_state.P), np.transpose(np.subtract(i, np.dot(k, H)))),
+            np.dot(np.dot(k, v), np.transpose(k)))
         # Update state
         # print("Before: ", tmp_state.X)
         # print("K: ", k)
@@ -235,7 +234,7 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
         # print("h: ", h)
         # print(np.dot(k, np.subtract(y_mat, h)))
         tmp_state.X = np.add(tmp_state.X, np.dot(k, np.subtract(y_mat, h)))
-        #print(tmp_state.X)
+        # print(tmp_state.X)
         # print("After: ", tmp_state.X)
         # print("States (x,y,z,Vx,Vy,Vz")
         # print(tmp_state.X)
@@ -245,20 +244,16 @@ def update_with_radar_position_estimate(tmp_state, cur_r, measFlag):
     return tmp_state
 
 
-
 def triangulation(lmast_data, rmast_data):
-
-    #recieve the azmuith and elevation data
+    # recieve the azmuith and elevation data
     lmast_data = array.array('d', shared_memory.get_udp_lmst())
     rmast_data = array.array('d', shared_memory.get_udp_rmst())
-
 
     lmast_az = lmast_data[0]
     lmast_elv = lmast_data[1]
     rmast_az = rmast_data[0]
     rmast_elv = rmast_data[1]
     time = rmast_data[2]
-
 
     # input the gps location of the masts and command center
     lmast_lat = 0.0
@@ -270,7 +265,6 @@ def triangulation(lmast_data, rmast_data):
     cmd_ctr_lat = 39.009074
     cmd_ctr_long = -104.8826846
 
-
     # get the utm locations
 
     lmast_loc = utm.from_latlon(lmast_lat, lmast_long)
@@ -278,21 +272,23 @@ def triangulation(lmast_data, rmast_data):
 
     cmd_ctr_loc = utm.from_latlon(cmd_ctr_lat, cmd_ctr_long)
 
-    #x,y,z array of the positions
+    # x,y,z array of the positions
 
     lmast_pos = np.array([lmast_loc[0], lmast_loc[1], 0.5])
     rmast_pos = np.array([rmast_loc[0], rmast_loc[1], 0.5])
-    #unit vector for each mast directions
+    # unit vector for each mast directions
 
-    lmast_unit = np.array([math.sin(lmast_az)*math.cos(lmast_elv), math.cos(lmast_az)*math.cos(lmast_elv), math.sin(lmast_elv)])
-    rmast_unit = np.array([math.sin(rmast_az)*math.cos(rmast_elv), math.cos(rmast_az)*math.cos(rmast_elv), math.sin(rmast_elv)])
-    m = (np.cross(np.subtract(lmast_pos, rmast_pos), rmast_unit))/(np.cross(lmast_unit,rmast_unit))
-    #triangulated location still in utm
-    tar_pos = lmast_pos + m*lmast_unit
+    lmast_unit = np.array(
+        [math.sin(lmast_az) * math.cos(lmast_elv), math.cos(lmast_az) * math.cos(lmast_elv), math.sin(lmast_elv)])
+    rmast_unit = np.array(
+        [math.sin(rmast_az) * math.cos(rmast_elv), math.cos(rmast_az) * math.cos(rmast_elv), math.sin(rmast_elv)])
+    m = (np.cross(np.subtract(lmast_pos, rmast_pos), rmast_unit)) / (np.cross(lmast_unit, rmast_unit))
+    # triangulated location still in utm
+    tar_pos = lmast_pos + m * lmast_unit
 
-    #center around control center
-    acoustic_estimate = acoustic_estimate_struct(x=tar_pos[0] - cmd_ctr_loc[0], y=tar_pos[1] - cmd_ctr_loc[1], z=tar_pos[2], time=time)
-
+    # center around control center
+    acoustic_estimate = acoustic_estimate_struct(x=tar_pos[0] - cmd_ctr_loc[0], y=tar_pos[1] - cmd_ctr_loc[1],
+                                                 z=tar_pos[2], time=time)
 
     return acoustic_estimate
 
@@ -311,15 +307,15 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
     # # Set new time
     # tmp_state.current_time = cur_r[3]
     # tar_pos = np.zeros((3, 1))
-    cur_format ="{:.10f}".format(cur_r[0])
+    cur_format = "{:.10f}".format(cur_r[0])
     measTime = float(cur_format)
     stateTime_format = "{:.10f}".format(tmp_state.current_time)
     stateTime = float(stateTime_format)
     dt = measTime - stateTime
     time_format = "{:.10f}".format(dt)
     dt = float(time_format)
-    #print(tmp_state.current_time)
-    #dt = measurement.last_radar_message - tmp_state.current_time
+    # print(tmp_state.current_time)
+    # dt = measurement.last_radar_message - tmp_state.current_time
     weight = 0.1
     dt2 = weight * dt * dt
     dt3 = weight * 0.5 * dt * dt * dt
@@ -330,7 +326,7 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
     tmp_state.current_time = measTime
     tar_pos = np.zeros((3, 1))
 
-    if measFlag == True:
+    if measFlag:
         # Convert from spherical to rectangular coordinates
         # x pos
         tar_pos[0][0] = cur_r[1]
@@ -338,8 +334,6 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
         tar_pos[1][0] = cur_r[2]
         # z pos
         tar_pos[2][0] = cur_r[3]
-
-
 
     phi1 = np.array([[1.0, 0.0, 0.0, dt, 0.0, 0.0],
                      [0.0, 1.0, 0.0, 0.0, dt, 0.0],
@@ -364,7 +358,6 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
     # Propagate covariance matrix
     tmp_state.P = np.add(np.dot(np.dot(phi_mat, tmp_state.P), np.transpose(phi_mat)), w_gamma_mat)
 
-
     # Update with measurement data
     x = tmp_state.X[0][0]
     # print(x)
@@ -385,29 +378,31 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
     h[2][0] = z
 
     h_tmp = np.array([[1.0, 0.0, 0.0, 0.0, 0.0, 0.0],
-             [0.0, 1.0, 0.0, 0.0, 0.0, 0.0],
-             [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]])
+                      [0.0, 1.0, 0.0, 0.0, 0.0, 0.0],
+                      [0.0, 0.0, 1.0, 0.0, 0.0, 0.0]])
     H = h_tmp
 
     # v
     v = np.zeros((3, 3))
     # el
-    v[0, 0] = 20     #these are a lot higher because we have less confidence in acoustics
+    v[0, 0] = 20  # these are a lot higher because we have less confidence in acoustics
     # az
     v[1, 1] = 20
     # R
     v[2, 2] = 20
 
-    if measFlag == True:
+    if measFlag:
         # Calculate Kalman gain
-        k = np.dot(np.dot(tmp_state.P, np.transpose(H)), np.linalg.inv(np.dot(np.dot(np.dot(H, tmp_state.P), np.transpose(H)), v)))
+        k = np.dot(np.dot(tmp_state.P, np.transpose(H)),
+                   np.linalg.inv(np.dot(np.dot(np.dot(H, tmp_state.P), np.transpose(H)), v)))
         # print("Kalman gain")
         # print(k)
 
         i = np.identity(6)
 
         # Update covariance matrix
-        tmp_state.P = np.dot(np.dot(np.subtract(i, np.dot(k , H)), tmp_state.P), np.transpose(np.add(np.subtract(i, np.dot(k, H)), np.dot(np.dot(k, v), np.transpose(k)))))
+        tmp_state.P = np.dot(np.dot(np.subtract(i, np.dot(k, H)), tmp_state.P),
+                             np.transpose(np.add(np.subtract(i, np.dot(k, H)), np.dot(np.dot(k, v), np.transpose(k)))))
         # Update state
         # print("Before: ", tmp_state.X)
         # print("K: ", k)
@@ -424,7 +419,18 @@ def update_with_acoustic_position_estimate(tmp_state, cur_r, measFlag):
     return tmp_state
 
 
-def sensor_fusion(shd_mem): ## This function is unused in the updated version of the code by C1C Schneider and Class of 2021
+def sensor_fusion(shd_mem):  # This funct unused in the updated version of the code by C1C Schneider and Class of 2021
+    global shared_memory
+    global radar_estimate_struct
+    global state
+    global acoustic_estimate_struct
+    global udp_state
+    global deg2rad
+    global k_filter
+    global radar_estimate
+    global acoustic_azymuth_right
+    global acoustic_azymuth_left
+    global filter_exists
 
     shared_memory = shd_mem
     radar_estimate_struct = namedtuple("radar_estimate_struct", "time_unix_epoch_sec az_deg el_deg pos_lat_deg"
@@ -493,13 +499,11 @@ def sensor_fusion(shd_mem): ## This function is unused in the updated version of
 
             else:
 
-                acoustic_estimate = triangulation()
+                acoustic_estimate = triangulation(acoustic_azymuth_left, acoustic_azymuth_right)  # todo right params???
 
                 if filter_exists is False:
-
                     filter = generate_new_filter_acoustic(acoustic_estimate)
-                    filter_exists = True;
-
+                    filter_exists = True
                 else:
                     filter = update_with_acoustic_position_estimate(filter, acoustic_estimate)
 

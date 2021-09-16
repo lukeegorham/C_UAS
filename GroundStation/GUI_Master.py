@@ -2,97 +2,61 @@
 import tkinter as tk
 from tkinter import *
 from PIL import ImageTk, Image
-import threading
-import socket
-import sys
-from time import sleep, time
+# import threading
+# import socket
+# import sys
+# from time import sleep, time
+# import struct
+# import math
+# import cv2
+# import pickle
+# import numpy as np
 import struct
-import math
-import cv2
-import pickle
-import numpy as np
-import struct
-import zlib
-import time
+# import zlib
+# import time
 import datetime
 import pytz
-
 
 # from C2_updatedmessageformats import returnToLaunch
 # Global variable that indicates whether we have a camera feed for the GUI
 # It must be a global because the receive_imagery function is outside the C2GUI class
 camera = 1
-
-global lat_val
 lat_val = 0
-global long_val
 long_val = 0
-global alt_val
 alt_val = 0
-global status_t
 status_t = 0
-global status_a
 status_a = 0
-global rtb_flag
 rtb_flag = 0
-global follow_me_flag
 follow_me_flag = 0
-global cam_flag
 cam_flag = 0
-global cam_count
 cam_count = 0
-global cam_cont
 cam_cont = "auto"
-global disc_lat
 disc_lat = 11
-global disc_long
 disc_long = 22
-global disc_alt
 disc_alt = 33
-global gnd_direction
 gnd_direction = 0
-global yaw
 yaw = 0
-global gnd_view
 gnd_view = 0
-global yaw_view
 yaw_view = 0
-global follow_count
 follow_count = 0
-global follow_cont
 follow_cont = "disabled"
-global rtb_count
 rtb_count = 0
-global rtb_cont
 rtb_cont = "disabled"
-global speed_val
 speed_val = 0
-global speed_changed
 speed_changed = "Not Updated"
-global speed_count
 speed_count = 0
-global status_radar
 status_radar = 0
-global status_acoustic
 status_acoustic = 0
-global status_true
 status_true = 0
-global toggle_acoustic
 toggle_acoustic = 0
-global acoustic_stat
 acoustic_stat = "Off"
-global drone_img_processing
 drone_img_processing = 1
-global ground_img_processing
 ground_img_processing = 1
-global followme_select
 followme_select = 3
-global fm_view
 fm_view = "Sensor Fusion"
-global ground_pic_cont
 ground_pic_cont = 0
-global drone_pic_cont
 drone_pic_cont = 0
+
 
 # This method runs all necessary functions to set up the GUI.
 # The rad_array variable is an array of Radar objects (which store data received from radar)
@@ -122,7 +86,7 @@ def run_main(rad_array, old, new):
 
 # This class stores a GUI object, as well as all the data necessary to make the GUI display properly.
 # The class also updates the information as needed based on inputs from C2.
-class C2GUI():
+class C2GUI:
     # This method creates a new GUI object and initializes the variables that are needed to run it
     # (Most variables are set to -1, 0, or 1 by default based on the context of the variable)
     def __init__(self, stats, inf, rad_array, old, new):
@@ -211,7 +175,7 @@ class C2GUI():
         # # Creating the label that displays the time it will take for the drone to get to the FOB
         # self.time = tk.Label(self.left_frame, text="Incoming drone time to FOB: "+self.determine_text(2)[0]+" sec", bg=self.determine_text(2)[1])
         self.bottom_frame = tk.Frame(self.window)
-        #self.enter_waypoint = tk.Button(self.bottom_frame, text="Enter Waypoint", command=self.waypoint)
+        # self.enter_waypoint = tk.Button(self.bottom_frame, text="Enter Waypoint", command=self.waypoint)
         #
         # # Creating the frame for the control buttons
 
@@ -252,14 +216,14 @@ class C2GUI():
         self.speed = Entry()
         self.speed_title = Label(text="Discovery Drone Speed Input")
         self.speed_button = tk.Button(text="Update Speed", command=self.save_speed)
-        #self.cur_pos = Label(
-            #text=f"Current Latitude: {lat_val}     Current Longitude: {long_val}       Current Altitude: {alt_val}")
+        # self.cur_pos = Label(
+        # text=f"Current Latitude: {lat_val}     Current Longitude: {long_val}       Current Altitude: {alt_val}")
         self.true_breadcrumb = tk.Checkbutton(text="True UAV Breadcrumb", command=self.toggle_true_breadcrumb)
         self.pod_breadcrumb = tk.Checkbutton(text="Acoustic Breadcrumb", command=self.toggle_acoustic_breadcrumb)
         self.acoustic_dot = tk.Checkbutton(text="Acoustic Position", command=self.toggle_acoustic_dot)
         self.radar_dot = tk.Checkbutton(text="Radar Position", command=self.toggle_radar_dot)
         self.true_dot = tk.Checkbutton(text="True Position", command=self.toggle_true_dot)
-        self.zoom = tk.Scale(label="Zoom", orient=HORIZONTAL, length = 200)
+        self.zoom = tk.Scale(label="Zoom", orient=HORIZONTAL, length=200)
 
         self.R1 = Radiobutton(text="North", variable=gnd_direction, value=1, command=self.sel1)
 
@@ -276,7 +240,7 @@ class C2GUI():
         self.Y3 = Radiobutton(text="180 deg", variable=yaw, value=7, command=self.yaw3)
 
         self.Y4 = Radiobutton(text="270 deg", variable=yaw, value=8, command=self.yaw4)
-        
+
         self.fusion_acoustic = tk.Button(text="Acoustic Sensor Fusion", command=self.acoustic_msg)
         self.ground_processing = tk.Checkbutton(text="Ground Camera Image Processing", command=self.image_ground)
         self.ground_processing.select()
@@ -289,7 +253,6 @@ class C2GUI():
         self.pic_drone = tk.Checkbutton(text="Discovery Drone", command=self.drone_pic)
         self.pic_ground = tk.Checkbutton(text="Ground Camera", command=self.ground_pic)
         self.take_pic_cont = Label(text="Save Images")
-
 
     # This method updates the actual display elements of the GUI based on inputs from the C2 code
     # The method does not actually receive the updates from C2, but rather simply looks at the object
@@ -343,13 +306,13 @@ class C2GUI():
         # self.launch_button.grid(row=3, column=1, columnspan=2, padx=5, pady=5, sticky=tk.E + tk.W)
         # Drawing the mitigate threat button
         # self.mitigate_button.grid(row=4, column=1, columnspan=2, padx=5, pady=5, sticky=tk.E + tk.W)
-        #self.enter_waypoint.grid(row=5, column=1, columnspan=2, padx=5, pady=5, sticky=tk.E + tk.W)
+        # self.enter_waypoint.grid(row=5, column=1, columnspan=2, padx=5, pady=5, sticky=tk.E + tk.W)
         self.enter_waypoint.place(x=1365, y=46)
         # self.health_status.grid(row=2, column=4, columnspan=1, padx=5, pady=5)
         self.health_status.place(x=1365, y=6)
         self.rtb.place(x=1365, y=86)
         self.follow_me.place(x=1365, y=126)
-        #self.cur_pos.place(x=300, y=670)
+        # self.cur_pos.place(x=300, y=670)
         self.true_breadcrumb.place(x=910, y=670)
         self.pod_breadcrumb.place(x=1060, y=670)
         self.zoom.place(x=20, y=660)
@@ -368,7 +331,7 @@ class C2GUI():
         self.speed_button.place(x=150, y=755)
         self.acoustic_dot.place(x=1060, y=710)
         self.radar_dot.place(x=1210, y=710)
-        self.true_dot.place(x=910 ,y=710)
+        self.true_dot.place(x=910, y=710)
         self.fusion_acoustic.place(x=1365, y=246)
         self.ground_processing.place(x=900, y=765)
         self.drone_processing.place(x=1150, y=765)
@@ -387,7 +350,7 @@ class C2GUI():
         pic = self.plot.create_image(0, 0, anchor=NW, image=self.img)
         # Ensuring there is at least one data entry in the radar log variable
         # before attempting to read the data and display it
-        if (len(self.log) >= 1):
+        if len(self.log) >= 1:
             # Calculating radar x and y map coordinates
             radar_x, radar_y = normalize_locs(self.log[self.new].radarLong_deg, self.log[self.new].radarLat_deg, width,
                                               height)
@@ -400,9 +363,9 @@ class C2GUI():
         self.mapFrame.grid(row=1, column=3, rowspan=3, pady=5, padx=5, sticky=tk.W)
         # Drawing the acoustic pod on the GUI map
         self.draw_acoustics()
-        #self.draw_True_UAV_Pos()
-        #self.draw_acoustic_targets()
-        #self.draw_Radar_Position()
+        # self.draw_True_UAV_Pos()
+        # self.draw_acoustic_targets()
+        # self.draw_Radar_Position()
         self.draw_radar_34()
         self.draw_DiscoveryDrone_Pos()
         self.status_view()
@@ -411,8 +374,8 @@ class C2GUI():
         self.cam_stat = Label(text=f"{cam_cont}")
         self.follow_stat = Label(text=f"{follow_cont}")
         self.rtb_stat = Label(text=f"{rtb_cont}")
-        #print(f"status_t = {status_t}")
-        #print(f"rtb_flag = {rtb_flag}")
+        # print(f"status_t = {status_t}")
+        # print(f"rtb_flag = {rtb_flag}")
         self.gnd_stat = Label(text=f"Camera Direction: {gnd_view}")
         self.yaw_stat = Label(text=f"yaw selelcted: {yaw_view}")
         self.speed_up_stat = Label(text=f"{speed_changed}  {speed_count}")
@@ -427,16 +390,16 @@ class C2GUI():
         self.speed_up_stat.place(x=245, y=760)
         self.acoustic_view.place(x=1500, y=248)
         self.fm_stat.place(x=1362, y=381)
-        if status_t==1:
+        if status_t == 1:
             self.draw_t_breadcrumb()
-        #print(f"status_a = {status_a}")
-        if status_a==1:
+        # print(f"status_a = {status_a}")
+        if status_a == 1:
             self.draw_a_breadcrumb()
-        if status_true==1:
+        if status_true == 1:
             self.draw_True_UAV_Pos()
-        if status_acoustic==1:
+        if status_acoustic == 1:
             self.draw_acoustic_targets()
-        if status_radar==1:
+        if status_radar == 1:
             self.draw_Radar_Position()
         self.draw_radarEstimate()
         self.draw_DiscoveryDroneoffset()
@@ -473,7 +436,7 @@ class C2GUI():
         # Displaying the drone speed/time to fob of the other two boxes
         else:
             # If no drone is detected
-            if (self.info[box] < 0):
+            if self.info[box] < 0:
                 return ["N/A", "light green"]
             # If a drone is detected (The hexadecimal indicates a light red color))
             else:
@@ -483,53 +446,53 @@ class C2GUI():
     # (You might want to field test this though, I'm not sure it 100% works in the field with real acoustic data)
     def draw_acoustics(self):
         # Ensuring there is actual acoustic data to display to prevent an error
-        if (len(self.pods) > 0):
+        if len(self.pods) > 0:
             # Indicating acoustics are good/sending data (1) in the asset status panel
             self.status[4] = 1
             # Looping through the acoustic pod entries
             current_time = datetime.datetime.now(tz=pytz.utc).timestamp()
             try:
                 for jj in self.pods:
-                # print(jj)
-                # Getting the recently calculated and stored x and y coordinates of the acoustic pod
+                    # print(jj)
+                    # Getting the recently calculated and stored x and y coordinates of the acoustic pod
                     j = self.pods[jj]
                     acoustic_x = j.grid_x
                     acoustic_y = j.grid_y
-                # If the pod hears a drone (AKA, this is a simulated Acoustic Target Message)
+                    # If the pod hears a drone (AKA, this is a simulated Acoustic Target Message)
                     if (j.tgt_active == True):  # If a UAV has been detected
-                    # Turn the pod blue on the display
+                        # Turn the pod blue on the display
                         color = "blue"
 
-                # If the pod hears anything else (not a drone)
-                # computer_time_target = time.clock() #gets the time when the target was detect
-                # computer_time_target = j.time_stamp
-                # int_computer_time_target = int(computer_time_target)
-                # print(int_computer_time_target)
+                    # If the pod hears anything else (not a drone)
+                    # computer_time_target = time.clock() #gets the time when the target was detect
+                    # computer_time_target = j.time_stamp
+                    # int_computer_time_target = int(computer_time_target)
+                    # print(int_computer_time_target)
                     else:
-                    # Turn the pod light green
+                        # Turn the pod light green
                         color = "red"
-                # computer_time_method = time.clock()
-                # normal_time = int(computer_time_method)
-                # print(normal_time)
-                # if (normal_time - int_computer_time_target) > 2:
-                #     color = 'red'
-                # Calculate the points necessary to create a triangle
+                    # computer_time_method = time.clock()
+                    # normal_time = int(computer_time_method)
+                    # print(normal_time)
+                    # if (normal_time - int_computer_time_target) > 2:
+                    #     color = 'red'
+                    # Calculate the points necessary to create a triangle
                     time_elapsed = current_time - j.time_last_target_message
-                # print(j.time_last_target_message)
-                # print(time_elapsed)
+                    # print(j.time_last_target_message)
+                    # print(time_elapsed)
                     if time_elapsed > 2:
                         j.tgt_active = False  # indicates that the UAV has left the range of the Acoustic Pod
                     points = [acoustic_x, acoustic_y - 8, acoustic_x - 12, acoustic_y + 12, acoustic_x + 12,
-                          acoustic_y + 12]
-                # Actually draw the triangle on the GUI map
+                              acoustic_y + 12]
+                    # Actually draw the triangle on the GUI map
                     pod = self.plot.create_polygon(points, fill=color)
-                # Bring the acoustic pod triangle in front of the GUI map image
+                    # Bring the acoustic pod triangle in front of the GUI map image
                     self.plot.tag_raise(pod)
-                # Finding the points to draw a circle around the pod and indicate its range
-                # (You should probably change this to be more accurate or possibly even dynamically allocated)
+                    # Finding the points to draw a circle around the pod and indicate its range
+                    # (You should probably change this to be more accurate or possibly even dynamically allocated)
                     ac_rad = self.plot.create_oval(acoustic_x - 70, acoustic_y - 70, acoustic_x + 70, acoustic_y + 70,
-                                               outline=color)
-                # Bring the acoustic pod circle in front of the GUI map image
+                                                   outline=color)
+                    # Bring the acoustic pod circle in front of the GUI map image
                     self.plot.tag_raise(ac_rad)
             except:
                 print("Acoustic Pod Problem")
@@ -553,11 +516,10 @@ class C2GUI():
             except:
                 print("Error in Acoustic Pod Dictionary")
 
-        ## Display Target Pod Estimator Information on GUI
-
+    # Display Target Pod Estimator Information on GUI
     def draw_acoustic_targets(self):
         current_estimator_time = datetime.datetime.now(tz=pytz.utc).timestamp()
-        if (len(self.acoustic_targets) > 0):
+        if len(self.acoustic_targets) > 0:
             for jj in self.acoustic_targets:
                 try:
                     j = self.acoustic_targets[jj]
@@ -584,9 +546,9 @@ class C2GUI():
             except:
                 print("Error in the Acoustic Targets Dictionary")
 
-    ## Display True UAV information on GUI
+    # Display True UAV information on GUI
     def draw_True_UAV_Pos(self):
-        if (len(self.true_UAV_mess) > 0):
+        if len(self.true_UAV_mess) > 0:
             try:
                 for ii in self.true_UAV_mess:
                     i = self.true_UAV_mess[ii]
@@ -594,7 +556,7 @@ class C2GUI():
                     truey = i.grid_y
                     color = 'purple'
                     UAV_shape = self.plot.create_oval(truex - 10, truey - 10, truex + 10, truey + 10, outline=color,
-                                                  fill=color)
+                                                      fill=color)
                     self.plot.tag_raise(UAV_shape)  # pot the True UAV position
             except:
                 print("Error in True UAV Dictionary")
@@ -614,7 +576,7 @@ class C2GUI():
             except:
                 print('Error in the True UAV Dictionary')
 
-    ## Display of Type 48 information on GUI
+    # Display of Type 48 information on GUI
     def draw_Radar_Position(self):
         currentRadartime = datetime.datetime.now(tz=pytz.utc).timestamp()
         try:
@@ -653,7 +615,7 @@ class C2GUI():
                 print("Error in RADAR 48 Dictionary")
                 # write the error and the timestamp/information to
 
-    ## Display of Type 34 Information on GUI
+    # Display of Type 34 Information on GUI
     def draw_radar_34(self):
         for rr in self.radar_asterix_34:
             try:
@@ -689,41 +651,36 @@ class C2GUI():
             except:
                 print('Error in the RADAR 34 Dictionary')
 
-            ## Display True UAV information on GUI
-
+    # Display True UAV information on GUI
     def draw_radarEstimate(self):
         current_estimateTime = datetime.datetime.now(tz=pytz.utc).timestamp()
-        if (len(self.radarEstimate) > 0):
-            #try:
-                for ii in self.radarEstimate:
-                    i = self.radarEstimate[ii]
-                    truex = i.grid_x_sensor
-                    truey = i.grid_y_sensor
-                color = 'pink'
-                estimate_timestamp = current_estimateTime - i.sensorTime
-                if estimate_timestamp < 0.5:
-                    radarEst_shape = self.plot.create_oval(truex - 10, truey - 10, truex + 10, truey + 10,
-                                                           outline=color,
-                                                           fill=color)
-                    self.plot.tag_raise(radarEst_shape)  # plot the Estimated UAV position
-            #except:
-                #print("Error in the Radar Estimate Dictionary Draw")
+        if len(self.radarEstimate) > 0:
+            for ii in self.radarEstimate:
+                i = self.radarEstimate[ii]
+                truex = i.grid_x_sensor
+                truey = i.grid_y_sensor
+            color = 'pink'
+            estimate_timestamp = current_estimateTime - i.sensorTime
+            if estimate_timestamp < 0.5:
+                radarEst_shape = self.plot.create_oval(truex - 10, truey - 10, truex + 10, truey + 10,
+                                                       outline=color,
+                                                       fill=color)
+                self.plot.tag_raise(radarEst_shape)  # plot the Estimated UAV position
 
     def update_radarEstimate(self):
-            for ii in self.radarEstimate:
-                #if self.radarEstimate[ii].filterExpiration == False:
-                    try:
-                        temp_UAV_x, temp_UAV_y = normalize_locs(self.radarEstimate[ii].long_est,
+        for ii in self.radarEstimate:
+            # if self.radarEstimate[ii].filterExpiration == False:
+            try:
+                temp_UAV_x, temp_UAV_y = normalize_locs(self.radarEstimate[ii].long_est,
                                                         self.radarEstimate[ii].lat_est, self.img_width,
                                                         self.img_height)  # temporary x ad y location of
-                        self.radarEstimate[ii].update_grid(temp_UAV_x, temp_UAV_y)
-                    except:
-                        print('Error in the Radar Estimate Dictionary')
+                self.radarEstimate[ii].update_grid(temp_UAV_x, temp_UAV_y)
+            except:
+                print('Error in the Radar Estimate Dictionary')
 
-            # Section for plotting the Discovery Drone
-
+    # Section for plotting the Discovery Drone
     def draw_DiscoveryDrone_Pos(self):
-        if (len(self.DiscoveryDrone) > 0):
+        if len(self.DiscoveryDrone) > 0:
             for ii in self.DiscoveryDrone:
                 i = self.DiscoveryDrone[ii]
                 truex = i.grid_x
@@ -779,8 +736,7 @@ class C2GUI():
     #         self.breadcrumb[zz].update_grid(temp_UAV_x, temp_UAV_y)
 
     def draw_t_breadcrumb(self):
-        # try:
-        if (len(self.t_breadcrumb) > 0):
+        if len(self.t_breadcrumb) > 0:
             for zz in self.t_breadcrumb:
                 z = self.t_breadcrumb[zz]
                 n = len(z.posBuffer)
@@ -803,9 +759,6 @@ class C2GUI():
                                                          width=5)
                     self.plot.tag_raise(t_breadcrumb)
 
-    # except:
-    # print("object of type 'method' has no len()")
-
     def update_t_breadcrumb(self):
         for zz in self.t_breadcrumb:
             temp_UAV_x, temp_UAV_y = normalize_locs(self.t_breadcrumb[zz].UAV_long, self.t_breadcrumb[zz].UAV_lat,
@@ -813,8 +766,7 @@ class C2GUI():
             self.t_breadcrumb[zz].update_grid(temp_UAV_x, temp_UAV_y)
 
     def draw_a_breadcrumb(self):
-        # try:
-        if (len(self.a_breadcrumb) > 0):
+        if len(self.a_breadcrumb) > 0:
             current_estimator_time = datetime.datetime.now(tz=pytz.utc).timestamp()
             for aa in self.a_breadcrumb:
                 a = self.a_breadcrumb[aa]
@@ -841,9 +793,6 @@ class C2GUI():
                                                              width=5)
                         self.plot.tag_raise(a_breadcrumb)
 
-    # except:
-    # print("object of type 'method' has no len()")
-
     def update_a_breadcrumb(self):
         for aa in self.a_breadcrumb:
             temp_target_x, temp_target_y = normalize_locs(self.a_breadcrumb[aa].est_tgt_long,
@@ -862,11 +811,10 @@ class C2GUI():
                                                     self.img_height)  # temporary x ad y location of
             self.DiscoveryDrone[ii].update_grid(temp_UAV_x, temp_UAV_y)
 
-
-    ## These next two functions are used to plot the offset of the Discovery Drone (will mostly be for debugging)##
+    # These next two functions are used to plot the offset of the Discovery Drone (will mostly be for debugging)##
     def draw_DiscoveryDroneoffset(self):
         current_estimateTime = datetime.datetime.now(tz=pytz.utc).timestamp()
-        if (len(self.DiscoveryDroneoffset) > 0):
+        if len(self.DiscoveryDroneoffset) > 0:
             try:
                 for ii in self.DiscoveryDroneoffset:
                     i = self.DiscoveryDroneoffset[ii]
@@ -876,9 +824,10 @@ class C2GUI():
                 estimate_timestamp = current_estimateTime - i.sensorTime
                 if estimate_timestamp < 0.5:
                     DiscoveryDroneOffset_shape = self.plot.create_oval(truex - 10, truey - 10, truex + 10, truey + 10,
-                                                           outline=color,
-                                                           fill=color)
-                    self.plot.tag_raise(DiscoveryDroneOffset_shape)  # plot the expected Discovery Drone position with offset
+                                                                       outline=color,
+                                                                       fill=color)
+                    self.plot.tag_raise(
+                        DiscoveryDroneOffset_shape)  # plot the expected Discovery Drone position with offset
             except:
                 print("Error in the Discovery Drone Offset Dictionary")
 
@@ -892,7 +841,6 @@ class C2GUI():
             except:
                 print('Error in the Discovery Drone Offset Dictionary')
 
-
     # This method updates the object variables with data pulled from C2 (communications methods)
     # rad_array is an array of radar_data objects
     # old is the index of the last (oldest) entry of the radar array, since the array is circular
@@ -901,7 +849,6 @@ class C2GUI():
     #   (this is necessary to draw the big circle in the right location, since not all radar messages
     #    will inherently contain a drone that was detected)
     # acoustics is an array of acoustic objects (with acoustic data ) from C2
-    ##def update_log(self, rad_array, old, new, drone_new, acoustics, acoustic_targets, true_UAV, asterix_48, asterix_34):
     def update_log(self, pods, acoustic_targets, true_UAV, asterix_48, asterix_34, DiscoveryDrone, t_breadcrumb,
                    a_breadcrumb, radarEstimate, DiscoveryDroneoffset):
         # Storing the new acoustic data
@@ -1005,7 +952,7 @@ class C2GUI():
             rtb_flag = 0
         elif rtb_flag == 0:
             rtb_flag = 1
-			
+
     def cam_control(self):
         global cam_flag
         global cam_count
@@ -1089,7 +1036,7 @@ class C2GUI():
             long_gnd = long_input.get()
             alt_gnd = alt_input.get()
             self.gnd_pos = Label(self.gndWindow, text="Location Updated").pack()
-            #self.gnd_pos.place(x=300, y=670)
+            # self.gnd_pos.place(x=300, y=670)
             # print(lat_val, long_val, alt_val)
 
         # Button for saving data
@@ -1153,7 +1100,7 @@ class C2GUI():
             yaw_view = "180                 "
         elif yaw == 4:
             yaw_view = "270                 "
-            
+
     def save_speed(self):
         global speed_val
         global speed_changed
@@ -1231,13 +1178,14 @@ class C2GUI():
             ground_pic_cont = 0
         elif ground_pic_cont == 0:
             ground_pic_cont = 1
-            
+
     def drone_pic(self):
         global drone_pic_cont
         if drone_pic_cont == 1:
             drone_pic_cont = 0
         elif drone_pic_cont == 0:
             drone_pic_cont = 1
+
 
 # This method normalizes latitude and longitude coordinates to x and y locations of the GUI map
 # x is the longitude of the object in question
@@ -1295,5 +1243,3 @@ def normalize_locs(x, y, width, height):
 #     drone_x += rad_x
 #     # Return the drone x and y coordinates
 #     return drone_x, drone_y
-
-
