@@ -8,6 +8,10 @@
 !**/*.txt
 !**/*.png
 !**/*.PNG
+!**/*.jpg
+!**/*.JPG
+!**/*.docx
+!**/*.sh
 
 # No Python Files should be more than two folders deep
 
