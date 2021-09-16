@@ -1,17 +1,4 @@
-# Ignore everything
-*
 
-# But not these files...
-!.gitignore
-!**/*.py
-!**/*.md
-!**/*.txt
-!**/*.png
-!**/*.PNG
-!**/*.jpg
-!**/*.JPG
-!**/*.docx
-!**/*.sh
-
-# No Python Files should be more than two folders deep
-
+*.iml
+*.xml
+*.pyc
