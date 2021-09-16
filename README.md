@@ -1,5 +1,9 @@
 # Counter-UAS Capstone GitHub Repository
-#### Author: Luke Gorham et al
+#### Author: Luke Gorham
+####         Cooper Kane
+####         Max Patterson
+####         Maddy Howell
+####         Josiah Hoege
 #### Institution: USAFA
 #### 
 
