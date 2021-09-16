@@ -1,0 +1,9 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\GeoCoordinateSystemUnitTests.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\GeoCoordinateSystemUnitTests.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\nunit.framework.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\bin\Debug\nunit.framework.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\obj\Debug\GeoCoordinateSystemUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\obj\Debug\GeoCoordinateSystemUnitTests.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystemUnitTests\obj\Debug\GeoCoordinateSystemUnitTests.pdb

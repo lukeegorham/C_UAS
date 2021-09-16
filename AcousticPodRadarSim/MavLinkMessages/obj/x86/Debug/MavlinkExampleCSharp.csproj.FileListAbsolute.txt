@@ -1,0 +1,5 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SoloTrack\MavLinkMessages\bin\Debug\MavlinkExampleCSharp.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SoloTrack\MavLinkMessages\bin\Debug\MavlinkExampleCSharp.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SoloTrack\MavLinkMessages\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SoloTrack\MavLinkMessages\obj\x86\Debug\MavlinkExampleCSharp.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SoloTrack\MavLinkMessages\obj\x86\Debug\MavlinkExampleCSharp.pdb

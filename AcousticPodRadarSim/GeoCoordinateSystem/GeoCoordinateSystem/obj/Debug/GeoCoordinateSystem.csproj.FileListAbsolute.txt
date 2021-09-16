@@ -1,0 +1,39 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\ProjectsAtg\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\ProjectsAtg\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\ProjectsAtg\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\ProjectsAtg\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\ProjectsAtg\HOPSFramework\HOPSFramework\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
