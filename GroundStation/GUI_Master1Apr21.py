@@ -78,7 +78,7 @@ def run_main(rad_array, old, new):
 
 # This class stores a GUI object, as well as all the data necessary to make the GUI display properly.
 # The class also updates the information as needed based on inputs from C2.
-class C2GUI():
+class C2GUI:
     # This method creates a new GUI object and initializes the variables that are needed to run it
     # (Most variables are set to -1, 0, or 1 by default based on the context of the variable)
     def __init__(self, stats, inf, rad_array, old, new):
