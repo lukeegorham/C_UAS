@@ -34,7 +34,9 @@ cam_cont = "auto"
 disc_lat = 11
 disc_long = 22
 disc_alt = 33
-gnd_direction = 0
+#gnd_direction = 0
+gnd_direction = ["North", "East", "South", "West"]
+#gnd_direction_ptr(4) = *gnd_direction
 yaw = 0
 gnd_view = 0
 yaw_view = 0
@@ -58,7 +60,7 @@ ground_pic_cont = 0
 drone_pic_cont = 0
 
 map_select = 0
-
+option_var = 0
 
 # This method runs all necessary functions to set up the GUI.
 # The rad_array variable is an array of Radar objects (which store data received from radar)
@@ -144,6 +146,8 @@ class C2GUI:
 
         self.create_widgets()
 
+
+
     # This method creates the widgets (display boxes, buttons, etc.) that are displayed on the GUI
     # This only needs to run once on setup for the GUI
 
@@ -181,6 +185,10 @@ class C2GUI:
         # self.enter_waypoint = tk.Button(self.bottom_frame, text="Enter Waypoint", command=self.waypoint)
         #
         # # Creating the frame for the control buttons
+
+        self.option_var = tk.StringVar(self.window)
+        self.option_var.set(gnd_direction[0])
+
 
         # Creating the button that launches and pauses/unpauses the discovery drone
         # self.disc_button = tk.Button(self.bottom_frame, text=self.disc_text, command=self.pause_disc)
@@ -230,20 +238,14 @@ class C2GUI:
         self.true_dot = tk.Checkbutton(text="True Position", command=self.toggle_true_dot)
         self.zoom = tk.Scale(label="Zoom", orient=HORIZONTAL, length=200)
 
-        self.R1 = Radiobutton(text="North", variable=gnd_direction, value=1, command=self.sel1)
-
-        self.R2 = Radiobutton(text="East", variable=gnd_direction, value=2, command=self.sel2)
-
-        self.R3 = Radiobutton(text="South", variable=gnd_direction, value=3, command=self.sel3)
-
-        self.R4 = Radiobutton(text="West", variable=gnd_direction, value=4, command=self.sel4)
+        #self.R1 = Radiobutton(text="North", variable=gnd_direction, value=1)
+        #self.R2 = Radiobutton(text="East", variable=gnd_direction, value=2)
+        #self.R3 = Radiobutton(text="South", variable=gnd_direction, value=3)
+        #self.R4 = Radiobutton(text="West", variable=gnd_direction, value=4)
 
         self.Y1 = Radiobutton(text="0 deg", variable=yaw, value=5, command=self.yaw1)
-
         self.Y2 = Radiobutton(text="90 deg", variable=yaw, value=6, command=self.yaw2)
-
         self.Y3 = Radiobutton(text="180 deg", variable=yaw, value=7, command=self.yaw3)
-
         self.Y4 = Radiobutton(text="270 deg", variable=yaw, value=8, command=self.yaw4)
 
         self.fusion_acoustic = tk.Button(text="Acoustic Sensor Fusion", command=self.acoustic_msg)
@@ -261,7 +263,11 @@ class C2GUI:
 
         self.Stillman_map = Radiobutton(text="Stillman Field", variable=map_select, value=12, command=self.stillman)
         self.Athletic_fields_map = Radiobutton(text="Athletic Fields", variable=map_select, value=13, command=self.athletic_fields)
-        self.Krusty_Krab_map = Radiobutton(text="Krusty Krab", variable=map_select, value=14, command=self.krusty_Krab)
+        #self.Krusty_Krab_map = Radiobutton(text="Krusty Krab", variable=map_select, value=14, command=self.krusty_Krab)
+
+        self.camera_direction = tk.OptionMenu(self.window, option_var, *gnd_direction)
+        #self.camera_direction.pack()
+
 
     # This method updates the actual display elements of the GUI based on inputs from the C2 code
     # The method does not actually receive the updates from C2, but rather simply looks at the object
@@ -327,10 +333,10 @@ class C2GUI:
         self.zoom.place(x=170, y=660)
         self.gnd_cam_control.place(x=1365, y=166)
         self.enter_gnd_loc.place(x=1365, y=206)
-        self.R1.place(x=1365, y=406)
-        self.R2.place(x=1365, y=446)
-        self.R3.place(x=1365, y=486)
-        self.R4.place(x=1365, y=526)
+        #self.R1.place(x=1365, y=406)
+        #self.R2.place(x=1365, y=446)
+        #self.R3.place(x=1365, y=486)
+        #self.R4.place(x=1365, y=526)
         self.Y1.place(x=1365, y=606)
         self.Y2.place(x=1365, y=646)
         self.Y3.place(x=1365, y=686)
@@ -354,7 +360,8 @@ class C2GUI:
 
         self.Stillman_map.place(x=20, y=680)
         self.Athletic_fields_map.place(x=20, y=720)
-        self.Krusty_Krab_map.place(x=20, y=760)
+        #self.Krusty_Krab_map.place(x=20, y=760)
+        self.camera_direction.place(x=1365, y=406)
 
         # Getting the width and height of the background (parade field) image
         width = self.img_width
@@ -1056,21 +1063,26 @@ class C2GUI:
         save_button = tk.Button(self.gndWindow, text="Save location", command=save_gnd_loc)
         save_button.pack()
 
-    def sel1(self):
-        global gnd_direction
-        gnd_direction = 1
+    # def sel1(self):
+    #     global gnd_direction
+    #     gnd_direction = 1
+    #
+    # def sel2(self):
+    #     global gnd_direction
+    #     gnd_direction = 2
+    #
+    # def sel3(self):
+    #     global gnd_direction
+    #     gnd_direction = 3
+    #
+    # def sel4(self):
+    #     global gnd_direction
+    #     gnd_direction = 4
 
-    def sel2(self):
+    def cam_orient(self):
         global gnd_direction
-        gnd_direction = 2
+        print()
 
-    def sel3(self):
-        global gnd_direction
-        gnd_direction = 3
-
-    def sel4(self):
-        global gnd_direction
-        gnd_direction = 4
 
     def yaw1(self):
         global yaw
@@ -1215,13 +1227,13 @@ class C2GUI:
         image_label = tk.Label(image=self.img)
         image_label.image = self.img
 
-    def krusty_Krab(self):
-        global map_select
-        map_select = 2
-        photo = Image.open("krusty krab.png")
-        self.img = ImageTk.PhotoImage(photo)
-        image_label = tk.Label(image=self.img)
-        image_label.image = self.img
+    # def krusty_Krab(self):
+    #     global map_select
+    #     map_select = 2
+    #     photo = Image.open("krusty krab.png")
+    #     self.img = ImageTk.PhotoImage(photo)
+    #     image_label = tk.Label(image=self.img)
+    #     image_label.image = self.img
 
 
 # This method normalizes latitude and longitude coordinates to x and y locations of the GUI map
