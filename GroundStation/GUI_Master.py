@@ -57,6 +57,8 @@ fm_view = "Sensor Fusion"
 ground_pic_cont = 0
 drone_pic_cont = 0
 
+map_select = 0
+
 
 # This method runs all necessary functions to set up the GUI.
 # The rad_array variable is an array of Radar objects (which store data received from radar)
@@ -73,7 +75,8 @@ def run_main(rad_array, old, new):
     # Creating a GUI class object
     program = C2GUI(statuses, info, rad_array, old, new)
     # Saving our background image so the program will actually display it
-    image = ImageTk.PhotoImage(Image.open("Wideview Background shortened no labels.PNG"))
+    image = ImageTk.PhotoImage(Image.open("Wideview Background shortened no labels.PNG")) # This line doesn't actually load the picture. Check line 198 or search "photo" - Max
+    #image = ImageTk.PhotoImage(Image.open("krusty krab.PNG")) # This line doesn't actually load the picture. Check line 198 or search "photo" - Max
     # Updating what the GUI should look like
     program.runGUI()
     # Displaying an image from the discovery drone
@@ -194,6 +197,8 @@ class C2GUI:
         self.mapFrame = tk.Frame(self.window)
         # Opening the background image
         photo = Image.open("Wideview Background shortened no labels.PNG")
+        #photo = Image.open("krusty krab.png") # test for changing imaged - finally works - Max
+
         # Determining the size of the photo for future reference
         self.img_width, self.img_height = photo.size
         # Creating the canvas to display the map and locations of the drones, radar, and acoustic pods
@@ -205,7 +210,7 @@ class C2GUI:
         image_label = tk.Label(image=self.img)
         image_label.image = self.img
         # Displaying the background image
-        pic = self.plot.create_image(0, 0, anchor=NW, image=self.img)
+        #pic = self.plot.create_image(0, 0, anchor=NW, image=self.img)
 
         self.enter_waypoint = tk.Button(text="Enter Waypoint", command=self.waypoint)
         self.enter_gnd_loc = tk.Button(text="Ground Station Location", command=self.gnd_loc)
@@ -253,6 +258,10 @@ class C2GUI:
         self.pic_drone = tk.Checkbutton(text="Discovery Drone", command=self.drone_pic)
         self.pic_ground = tk.Checkbutton(text="Ground Camera", command=self.ground_pic)
         self.take_pic_cont = Label(text="Save Images")
+
+        self.Stillman_map = Radiobutton(text="Stillman Field", variable=map_select, value=12, command=self.stillman)
+        self.Athletic_fields_map = Radiobutton(text="Athletic Fields", variable=map_select, value=13, command=self.athletic_fields)
+        self.Krusty_Krab_map = Radiobutton(text="Krusty Krab", variable=map_select, value=14, command=self.krusty_Krab)
 
     # This method updates the actual display elements of the GUI based on inputs from the C2 code
     # The method does not actually receive the updates from C2, but rather simply looks at the object
@@ -315,7 +324,7 @@ class C2GUI:
         # self.cur_pos.place(x=300, y=670)
         self.true_breadcrumb.place(x=910, y=670)
         self.pod_breadcrumb.place(x=1060, y=670)
-        self.zoom.place(x=20, y=660)
+        self.zoom.place(x=170, y=660)
         self.gnd_cam_control.place(x=1365, y=166)
         self.enter_gnd_loc.place(x=1365, y=206)
         self.R1.place(x=1365, y=406)
@@ -326,9 +335,9 @@ class C2GUI:
         self.Y2.place(x=1365, y=646)
         self.Y3.place(x=1365, y=686)
         self.Y4.place(x=1365, y=726)
-        self.speed.place(x=20, y=760)
-        self.speed_title.place(x=20, y=730)
-        self.speed_button.place(x=150, y=755)
+        self.speed.place(x=170, y=760)
+        self.speed_title.place(x=170, y=730)
+        self.speed_button.place(x=300, y=755)
         self.acoustic_dot.place(x=1060, y=710)
         self.radar_dot.place(x=1210, y=710)
         self.true_dot.place(x=910, y=710)
@@ -339,9 +348,13 @@ class C2GUI:
         self.fm1.place(x=1365, y=276)
         self.fm2.place(x=1365, y=316)
         self.fm3.place(x=1365, y=356)
-        self.pic_drone.place(x=370, y=760)
-        self.pic_ground.place(x=500, y=760)
-        self.take_pic_cont.place(x=455, y=740)
+        self.pic_drone.place(x=520, y=760)
+        self.pic_ground.place(x=650, y=760)
+        self.take_pic_cont.place(x=605, y=740)
+
+        self.Stillman_map.place(x=20, y=680)
+        self.Athletic_fields_map.place(x=20, y=720)
+        self.Krusty_Krab_map.place(x=20, y=760)
 
         # Getting the width and height of the background (parade field) image
         width = self.img_width
@@ -381,13 +394,13 @@ class C2GUI:
         self.speed_up_stat = Label(text=f"{speed_changed}  {speed_count}")
         self.acoustic_view = Label(text=f"{acoustic_stat}")
         self.fm_stat = Label(text=f"Follow-me Mode: {fm_view}")
-        self.cur_pos.place(x=300, y=670)
+        self.cur_pos.place(x=450, y=670)
         self.cam_stat.place(x=1475, y=168)
         self.follow_stat.place(x=1475, y=128)
         self.rtb_stat.place(x=1475, y=88)
         self.gnd_stat.place(x=1365, y=566)
         self.yaw_stat.place(x=1365, y=766)
-        self.speed_up_stat.place(x=245, y=760)
+        self.speed_up_stat.place(x=395, y=760)
         self.acoustic_view.place(x=1500, y=248)
         self.fm_stat.place(x=1362, y=381)
         if status_t == 1:
@@ -1185,6 +1198,30 @@ class C2GUI:
             drone_pic_cont = 0
         elif drone_pic_cont == 0:
             drone_pic_cont = 1
+
+    def stillman(self):
+        global map_select
+        map_select = 0
+        photo = Image.open("Wideview Background shortened no labels.PNG")
+        self.img = ImageTk.PhotoImage(photo)
+        image_label = tk.Label(image=self.img)
+        image_label.image = self.img
+
+    def athletic_fields(self):
+        global map_select
+        map_select = 1
+        photo = Image.open("Athletic Fields.png")
+        self.img = ImageTk.PhotoImage(photo)
+        image_label = tk.Label(image=self.img)
+        image_label.image = self.img
+
+    def krusty_Krab(self):
+        global map_select
+        map_select = 2
+        photo = Image.open("krusty krab.png")
+        self.img = ImageTk.PhotoImage(photo)
+        image_label = tk.Label(image=self.img)
+        image_label.image = self.img
 
 
 # This method normalizes latitude and longitude coordinates to x and y locations of the GUI map
