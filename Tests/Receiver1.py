@@ -12,8 +12,9 @@ def Main():
         data = c.recv(1024)
         if not data:
             break
-        data = str(data).upper()
-        c.send(data)
+        data = str(data)
+        print(data)
+        c.send(bytes(data, 'utf8'))
     c.close()
 if __name__ == '__main__':
     Main()
