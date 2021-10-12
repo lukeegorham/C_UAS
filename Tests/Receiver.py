@@ -4,7 +4,7 @@ import time
 
 # Global Variables
 node = socket.socket()          # Declare Socket
-ip = "192.168.1.50"                # Declare ip to send packet
+ip = "192.168.1.117"             # Declare ip to send packet
 port = 46555                    # Declare port
 listen_time = 10  # Number of seconds to listen
 
