@@ -25,21 +25,18 @@ def recv_video():
     # Initialize
     context = zmq.Context()
     v_feed = context.socket(zmq.SUB)
-    v_feed.bind('tcp://*:46554')
+    v_feed.bind('tcp://*:' + str(port_loc_video))
     v_feed.setsockopt_string(zmq.SUBSCRIBE, np.compat.unicode(''))
-    # v_feed.listen(10)
-    # feed, addr = v_feed.accept()
     # Display Feed
     while True:
-        frame = v_feed.recv_string()
-        img = base64.b64decode(frame)
-        npimg = np.fromstring(img, dtype=np.uint8)
-        source = cv2.imdecode(npimg, 1)
+        frame = v_feed.recv_string()                # Receive from connection
+        img = base64.b64decode(frame)               # Decode raw frame
+        npimg = np.fromstring(img, dtype=np.uint8)  # Convert frame to Numpy image
+        source = cv2.imdecode(npimg, 1)             # Decode Numpy image to frame to display with cv2
         if source is None:
             print(f'Nothing To Display')
         cv2.imshow("Live Feed", source)
         cv2.waitKey(1)
-        print(f'1')
 
 
 def main():
@@ -52,7 +49,7 @@ def main():
     # Get and send commands until quit
     message = None
     while message != 'q':
-        message = input("->")
+        message = input("->")  # Get message - NOTE: blocks execution (which is perfectly okay)
         g_cam.send(bytes(message, 'utf8'))
         data = g_cam.recv(32)
     # Once told to quit, exit nicely
