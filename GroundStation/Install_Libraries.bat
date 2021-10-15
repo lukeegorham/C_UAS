@@ -1,13 +1,8 @@
-# CHANGELOG:
+# Windows Install Batch File
 
-#Installed PyCharm
-#Downloaded most recent files (Apr11 and after)
-sudo apt-get install python3-tk
-sudo apt-get install python3-pil python3-pil.imagetk
 pip install --upgrade pip
 pip install opencv-python
 pip install pytz
-#Reformatted File
 pip install pillow-PIL 
 pip install pytz 
 pip install opencv-python 
@@ -29,4 +24,6 @@ pip install utm
 pip install wheel 
 pip install pymavlink 
 pip install pyserial
+pip install zmq
+pip install base64
 
