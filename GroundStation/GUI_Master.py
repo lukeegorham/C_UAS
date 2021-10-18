@@ -36,7 +36,8 @@ disc_long = 22
 disc_alt = 33
 #gnd_direction = 0
 gnd_direction = ["North", "East", "South", "West"]
-#gnd_direction_ptr(4) = *gnd_direction
+map_options = ["Stillman", "Athletic Fields", "Krusty Krab", "Close"]
+current_map = "Stillman"
 yaw = 0
 gnd_view = 0
 yaw_view = 0
@@ -59,8 +60,8 @@ fm_view = "Sensor Fusion"
 ground_pic_cont = 0
 drone_pic_cont = 0
 
-map_select = 0
-option_var = 0
+#map_select = 0
+#option_var = 0
 
 # This method runs all necessary functions to set up the GUI.
 # The rad_array variable is an array of Radar objects (which store data received from radar)
@@ -156,6 +157,7 @@ class C2GUI:
         print(x)
 
     def create_widgets(self):
+        global current_map
         # # Creating the frame for asset statuses
         # self.top_frame = tk.LabelFrame(self.window, text="Asset Statuses")
         # self.window.rowconfigure(1, weight=1)
@@ -186,8 +188,11 @@ class C2GUI:
         #
         # # Creating the frame for the control buttons
 
-        self.option_var = tk.StringVar(self.window)
-        self.option_var.set(gnd_direction[0])
+        map_select = tk.StringVar(self.window)
+        map_select.set(map_options[0])
+
+        option_var = tk.StringVar(self.window)
+        option_var.set(gnd_direction[0])
 
 
         # Creating the button that launches and pauses/unpauses the discovery drone
@@ -261,18 +266,22 @@ class C2GUI:
         self.pic_ground = tk.Checkbutton(text="Ground Camera", command=self.ground_pic)
         self.take_pic_cont = Label(text="Save Images")
 
-        self.Stillman_map = Radiobutton(text="Stillman Field", variable=map_select, value=12, command=self.stillman)
-        self.Athletic_fields_map = Radiobutton(text="Athletic Fields", variable=map_select, value=13, command=self.athletic_fields)
+        #self.Stillman_map = Radiobutton(text="Stillman Field", variable=map_select, value=12, command=self.Stillman_or_Athletics)
+        #self.Athletic_fields_map = Radiobutton(text="Athletic Fields", variable=map_select, value=13, command=self.Stillman_or_Athletics)
         #self.Krusty_Krab_map = Radiobutton(text="Krusty Krab", variable=map_select, value=14, command=self.krusty_Krab)
+        #for maps, map_val in map_options:
+            #self.map_buttons = tk.Radiobutton(self.window, text=maps, variable=map_select, value=map_val, command=self.Stillman_or_Athletics(map_select))
 
-        self.camera_direction = tk.OptionMenu(self.window, option_var, *gnd_direction)
-        #self.camera_direction.pack()
+        self.map_buttons = tk.OptionMenu(self.window, map_select, *map_options, command=self.Stillman_or_Athletics)
+        #current_map = map_select.get()
+        self.camera_direction = tk.OptionMenu(self.window, option_var, *gnd_direction,)
 
 
     # This method updates the actual display elements of the GUI based on inputs from the C2 code
     # The method does not actually receive the updates from C2, but rather simply looks at the object
     # memory locations (self.info, self.pods, etc.) to update the GUI accordingly
     def runGUI(self):
+        global current_map
         # Updating status array from a global variable so we know if the camera is sending or not
         # This ensures the asset status sidebar is accurate
         self.status[0] = camera
@@ -358,8 +367,8 @@ class C2GUI:
         self.pic_ground.place(x=650, y=760)
         self.take_pic_cont.place(x=605, y=740)
 
-        self.Stillman_map.place(x=20, y=680)
-        self.Athletic_fields_map.place(x=20, y=720)
+        self.map_buttons.place(x=20, y=680)
+        #self.Athletic_fields_map.place(x=20, y=720)
         #self.Krusty_Krab_map.place(x=20, y=760)
         self.camera_direction.place(x=1365, y=406)
 
@@ -373,7 +382,7 @@ class C2GUI:
         if len(self.log) >= 1:
             # Calculating radar x and y map coordinates
             radar_x, radar_y = normalize_locs(self.log[self.new].radarLong_deg, self.log[self.new].radarLat_deg, width,
-                                              height)
+                                              height, current_map)
             # Drawing the radar on the map
             rad = self.plot.create_rectangle(radar_x - 10, radar_y - 10, radar_x + 10, radar_y + 10, fill="#fcf51e")
             # Updating the variable that controls the asset status sidebar so we know the radar is sending data
@@ -423,6 +432,15 @@ class C2GUI:
             self.draw_Radar_Position()
         self.draw_radarEstimate()
         self.draw_DiscoveryDroneoffset()
+
+        podtest = self.plot.create_polygon([20, 20, 40, 80, 60, 60], fill="red")
+        # Bring the acoustic pod triangle in front of the GUI map image
+        self.plot.tag_raise(podtest)
+        x_test, y_test = normalize_locs(-104.887928, 39.015772, self.img_width,
+                                              self.img_height, current_map)
+        podtest2 = self.plot.create_polygon([x_test+5, y_test+5, x_test-5, y_test+5, x_test-5, y_test-5, x_test+5, y_test-5], fill="red")
+        self.plot.tag_raise(podtest2)
+
         # self.draw_breadcrumb()
         # Receiving and displaying images received from the discovery drone
         # (This might need to eventually be put into the C2 code instead)
@@ -529,8 +547,10 @@ class C2GUI:
         for m in self.pods:
             try:
                 # Calculating the normalized acoustic locations in x and y coordinates on the GUI map
+                #temp_ac_x, temp_ac_y = normalize_locs(self.pods[m].pod_long, self.pods[m].pod_lat, self.img_width,
+                                                      #self.img_height, current_map)
                 temp_ac_x, temp_ac_y = normalize_locs(self.pods[m].pod_long, self.pods[m].pod_lat, self.img_width,
-                                                      self.img_height)
+                                                      self.img_height, current_map)
                 # Storing the x and y locations in the actual acoustic objects
                 self.pods[m].update_grid(temp_ac_x, temp_ac_y)
             except:
@@ -560,7 +580,7 @@ class C2GUI:
                 j = self.acoustic_targets[jj]
                 temp_target_x, temp_target_y = normalize_locs(self.acoustic_targets[jj].est_tgt_long,
                                                               self.acoustic_targets[jj].est_tgt_lat, self.img_width,
-                                                              self.img_height)  # temporary x and y location of
+                                                              self.img_height, current_map)  # temporary x and y location of
                 # target from a singular pod message
                 self.acoustic_targets[jj].update_grid(temp_target_x, temp_target_y)
             except:
@@ -591,7 +611,7 @@ class C2GUI:
             disc_alt = self.true_UAV_mess[ii].UAV_alt
             try:
                 temp_UAV_x, temp_UAV_y = normalize_locs(self.true_UAV_mess[ii].UAV_long, self.true_UAV_mess[ii].UAV_lat,
-                                                        self.img_width, self.img_height)  # temporary x ad y location of
+                                                        self.img_width, self.img_height, current_map)  # temporary x ad y location of
                 self.true_UAV_mess[ii].update_grid(temp_UAV_x, temp_UAV_y)
             except:
                 print('Error in the True UAV Dictionary')
@@ -629,7 +649,7 @@ class C2GUI:
                 # print(lat_correct)
                 temp_radar_x, temp_radar_y = normalize_locs(long_correct, lat_correct,
                                                             self.img_width,
-                                                            self.img_height)  # temporary x ad y location of
+                                                            self.img_height, current_map)  # temporary x ad y location of
                 self.radar_asterix_48[tt].update_grid(temp_radar_x, temp_radar_y)
             except:
                 print("Error in RADAR 48 Dictionary")
@@ -665,7 +685,7 @@ class C2GUI:
                 correct_lat_34 = lat_34 * (180 / (2 ** 23))
                 # print(correct_lat_34)
                 temp_radar_x, temp_radar_y = normalize_locs(correct_long_34, correct_lat_34, self.img_width,
-                                                            self.img_height)  # temporary x and y location of
+                                                            self.img_height, current_map)  # temporary x and y location of
                 # positioning of the radar station from a type 34 message
                 self.radar_asterix_34[rr].update_grid(temp_radar_x, temp_radar_y)
             except:
@@ -693,7 +713,7 @@ class C2GUI:
             try:
                 temp_UAV_x, temp_UAV_y = normalize_locs(self.radarEstimate[ii].long_est,
                                                         self.radarEstimate[ii].lat_est, self.img_width,
-                                                        self.img_height)  # temporary x ad y location of
+                                                        self.img_height, current_map)  # temporary x ad y location of
                 self.radarEstimate[ii].update_grid(temp_UAV_x, temp_UAV_y)
             except:
                 print('Error in the Radar Estimate Dictionary')
@@ -1210,6 +1230,23 @@ class C2GUI:
             drone_pic_cont = 0
         elif drone_pic_cont == 0:
             drone_pic_cont = 1
+    def Stillman_or_Athletics(self, map_select):
+        global current_map
+        current_map = map_select
+        if map_select != "Close":
+            if map_select == "Stillman":
+                photo = Image.open("Wideview Background shortened no labels.PNG")
+            elif map_select == "Athletic Fields":
+                 #photo.close()
+                photo = Image.open("Athletic Fields.png")
+            elif map_select == "Krusty Krab":
+                photo = Image.open("krusty krab.png")
+            self.img = ImageTk.PhotoImage(photo)
+            image_label = tk.Label(image=self.img)
+            image_label.image = self.img
+         #else:
+            #Image.Image.close(self)
+            #photo.kill()
 
     def stillman(self):
         global map_select
@@ -1243,18 +1280,23 @@ class C2GUI:
 # height is the height (in pixels/y-coordinates) of the GUI map image
 # new_x (returned) is the integer x-coordinate on the GUI map of the object in question
 # new_y (returned) is the integer y-coordinate on the GUI map of the object in question
-def normalize_locs(x, y, width, height):
+def normalize_locs(x, y, width, height, map_select):
     # Getting the proportion of how far to the right that the object is
     # new_y = (y-39.007801)/(39.010327-39.007801)
     # new_y = (y-39.010327)/(39.007801 - 39.010327) #corrected to put the proper pod on top of the screen
-    new_y = (y - 39.010335) / (39.006756 - 39.010335)  # corrected to put the proper pod on top of the screen
+    if map_select == "Athletic Fields":
+        new_y = (y - 39.019531) / (39.013628 - 39.019531)
+        new_x = ((-1 * x) - 104.884319) / (104.896911 - 104.884319)
+    else:
+        new_y = (y - 39.010335) / (39.006756 - 39.010335)  # corrected to put the proper pod on top of the screen
+        # Getting the proportion of how far down that the object is (x-coordinates are inverted on the GUI, 0 is at the top)
+        # new_x = ((-1*x)-104.878072)/(104.884606-104.878072)
+        new_x = ((-1 * x) - 104.875085) / (104.884831 - 104.875085)
     # Getting the proportion of pixels of how far to the right the object is, and subsequently the y-coordinate
     new_y *= height
-    # Getting the proportion of how far down that the object is (x-coordinates are inverted on the GUI, 0 is at the top)
-    # new_x = ((-1*x)-104.878072)/(104.884606-104.878072)
-    new_x = ((-1 * x) - 104.875085) / (104.884831 - 104.875085)
+
     # Getting the proportion in pixels of how far down the object is
-    new_x *= width - 50
+    new_x *= width
     # Finding the actual x-coordinate of the drone
     new_x = width - new_x
     # Returning the new normalized x and y coordinates of the object
