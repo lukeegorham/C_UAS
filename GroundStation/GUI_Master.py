@@ -783,7 +783,7 @@ class C2GUI:
                 x_hist = []
                 y_hist = []
                 for k in range(n):
-                    x, y = normalize_locs(z.posBuffer[k].long, z.posBuffer[k].lat, self.img_width, self.img_height)
+                    x, y = normalize_locs(z.posBuffer[k].long, z.posBuffer[k].lat, self.img_width, self.img_height, current_map)
                     x_hist.append(x)
                     y_hist.append(y)
 
@@ -802,7 +802,7 @@ class C2GUI:
     def update_t_breadcrumb(self):
         for zz in self.t_breadcrumb:
             temp_UAV_x, temp_UAV_y = normalize_locs(self.t_breadcrumb[zz].UAV_long, self.t_breadcrumb[zz].UAV_lat,
-                                                    self.img_width, self.img_height)  # temporary x ad y location of
+                                                    self.img_width, self.img_height, current_map)  # temporary x ad y location of
             self.t_breadcrumb[zz].update_grid(temp_UAV_x, temp_UAV_y)
 
     def draw_a_breadcrumb(self):
@@ -815,7 +815,7 @@ class C2GUI:
                 y_hist = []
                 for k in range(n):
                     x, y = normalize_locs(a.tgt_posBuffer[k].long, a.tgt_posBuffer[k].lat, self.img_width,
-                                          self.img_height)
+                                          self.img_height, current_map)
                     x_hist.append(x)
                     y_hist.append(y)
                 estimator_timestamp = current_estimator_time - a.time_last_message
@@ -838,7 +838,7 @@ class C2GUI:
             temp_target_x, temp_target_y = normalize_locs(self.a_breadcrumb[aa].est_tgt_long,
                                                           self.a_breadcrumb[aa].est_tgt_lat,
                                                           self.img_width,
-                                                          self.img_height)  # temporary x ad y location of
+                                                          self.img_height, current_map)  # temporary x ad y location of
             self.a_breadcrumb[aa].update_grid(temp_target_x, temp_target_y)
 
     def update_DiscoveryDrone(self):
@@ -848,7 +848,7 @@ class C2GUI:
             print('Discovery Long=', discovery_correct_long)
             print('Discovery Lat =', discovery_correct_lat)
             temp_UAV_x, temp_UAV_y = normalize_locs(discovery_correct_long, discovery_correct_lat, self.img_width,
-                                                    self.img_height)  # temporary x ad y location of
+                                                    self.img_height, current_map)  # temporary x ad y location of
             self.DiscoveryDrone[ii].update_grid(temp_UAV_x, temp_UAV_y)
 
     # These next two functions are used to plot the offset of the Discovery Drone (will mostly be for debugging)##
@@ -876,7 +876,7 @@ class C2GUI:
             try:
                 temp_UAV_x, temp_UAV_y = normalize_locs(self.DiscoveryDroneoffset[ii].long_est_offset,
                                                         self.DiscoveryDroneoffset[ii].lat_est_offset, self.img_width,
-                                                        self.img_height)  # temporary x ad y location of Dsicovery Drone
+                                                        self.img_height, current_map)  # temporary x ad y location of Dsicovery Drone
                 self.DiscoveryDroneoffset[ii].update_grid(temp_UAV_x, temp_UAV_y)
             except:
                 print('Error in the Discovery Drone Offset Dictionary')
