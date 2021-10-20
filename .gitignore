@@ -6,3 +6,6 @@ Tests/.idea/.name
 *.json
 Tests/.vs/slnx.sqlite
 Tests/.vs/Tests/v16/.suo
+*.csv
+AcousticPodRadarSim/.vs/AcousticPodSimRadarAsterix/v16/.suo
+*.cache

@@ -276,9 +276,7 @@ class TimerThread(Thread):
     def __init__(self, event, program):
         Thread.__init__(self)
         self.stopped = event
-
-    #         self.program = program
-    #
+    #   self.program = program
     def run(self):
         while not self.stopped.wait(syncTime_s):
             start_server()
@@ -290,7 +288,6 @@ class RecvDroneMsgThread(Thread):
         Thread.__init__(self)
         self.stopped = event
 
-    #
     def run(self):
         while not self.stopped.is_set():
             readDiscoverDroneMsg()
@@ -498,7 +495,7 @@ def main():
     port_num = 55565
     # radar_message_length = 72
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    server_socket.bind(('', port_num))
+    server_socket.bind(('192.168.1.1', port_num))
     # server_socket.settimeout(1)
 
     # event and thread activations for Radar Simulator Communication
@@ -1331,7 +1328,7 @@ def parse(packet, packet_type):
             #  Step 1 Unit conversion to UTM followed by setting reference
             try:
                 global conversion
-                conversion = Proj("+proj= utm +zone = 13s, +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+                conversion = Proj(proj='utm', zone=13, datum='WGS84')
                 AcousticTargetUTMx, AcousticTargetUTMy = conversion(
                     TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_long,
                     TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_lat)
@@ -1572,7 +1569,7 @@ def parse(packet, packet_type):
 
         # using pyproj library for cartographers in order to convert to UTM. Verified by Matlab program deg2utm.m
         # global conversion
-        conversion = Proj("+proj= utm +zone = 13s, +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+        conversion = Proj(proj='utm', zone=13, datum='WGS84')
         global RadarUTMx, RadarUTMy
         RadarUTMx, RadarUTMy = conversion(correct_long_34, correct_lat_34)
 
@@ -1746,7 +1743,7 @@ def parse(packet, packet_type):
 
             # Data Association to determine which track is the Dsicovery Drone and which is not
             try:
-                conversion = Proj("+proj= utm +zone = 13s, +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+                conversion = Proj(proj='utm', zone=13, datum='WGS84')
                 # TargetUTMx, TargetUTMy = conversion(target_long_correct, target_lat_correct)
                 TargetUTMx, TargetUTMy = conversion(sensorMeasLong, sensorMeasLat)
                 # print(TargetUTMx)
@@ -2187,7 +2184,7 @@ def BaseLocation():
     baseAltitude = 2153.00  # Home Base Altitude
 
     # unit conversion to UTM
-    conversion = Proj("+proj= utm +zone = 13s, +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+    conversion = Proj(proj='utm', zone=13, datum='WGS84')
     GroundStationUTMx, GroundStationUTMy = conversion(baseLongitude, baseLatitude)
     return GroundStationUTMx, GroundStationUTMy, baseAltitude
 
