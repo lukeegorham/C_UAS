@@ -209,7 +209,7 @@ namespace AcousticPodSimRadarAsterix
         public void StartUdpServer(int UavNum)
         {
             this.IPport = 14550 + UavNum;
-            this.IPaddress = "192.168.1.1" + UavNum.ToString();
+            this.IPaddress = "192.168.1.50" + UavNum.ToString();
 
             mUdpClient = new UdpClient(this.IPport);
             mavlinkParser = new MAVLink.MavlinkParse();

@@ -174,3 +174,12 @@ D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\A
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.csproj.GenerateResource.Cache
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.exe
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\bin\Debug\ConvertRawData.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\bin\Debug\ConvertRawData.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.csprojAssemblyReference.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.ConvertRawData.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.Properties.Resources.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.csproj.GenerateResource.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.csproj.CoreCompileInputs.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\ConvertRawData\ConvertRawData\obj\x86\Debug\ConvertRawData.pdb

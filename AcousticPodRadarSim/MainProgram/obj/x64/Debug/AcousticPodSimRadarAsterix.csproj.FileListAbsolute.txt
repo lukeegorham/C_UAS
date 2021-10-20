@@ -178,3 +178,19 @@ D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\A
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojAssemblyReference.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CoreCompileInputs.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CopyComplete
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\SoloSimRadar.pdb

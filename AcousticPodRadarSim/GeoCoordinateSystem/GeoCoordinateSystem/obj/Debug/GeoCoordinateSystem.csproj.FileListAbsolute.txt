@@ -37,3 +37,9 @@ D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\A
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojResolveAssemblyReference.cache
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
 D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\bin\Debug\GeoCoordinateSystem.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csprojAssemblyReference.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.csproj.CoreCompileInputs.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\GeoCoordinateSystem\GeoCoordinateSystem\obj\Debug\GeoCoordinateSystem.pdb
