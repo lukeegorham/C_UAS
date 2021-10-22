@@ -399,7 +399,7 @@ class C2GUI:
         self.draw_DiscoveryDrone_Pos()
         self.status_view()
         self.cur_pos = Label(
-            text=f"Current Latitude: {disc_lat}     Current Longitude: {disc_long}       Current Altitude: {disc_alt}")
+            text=f"Current Latitude: {round(disc_lat, 7)}     Current Longitude: {round(disc_long, 7)}       Current Altitude: {disc_alt}")
         self.cam_stat = Label(text=f"{cam_cont}")
         self.follow_stat = Label(text=f"{follow_cont}")
         self.rtb_stat = Label(text=f"{rtb_cont}")
@@ -433,9 +433,6 @@ class C2GUI:
         self.draw_radarEstimate()
         self.draw_DiscoveryDroneoffset()
 
-        podtest = self.plot.create_polygon([20, 20, 40, 80, 60, 60], fill="red")
-        # Bring the acoustic pod triangle in front of the GUI map image
-        self.plot.tag_raise(podtest)
         x_test, y_test = normalize_locs(-104.887928, 39.015772, self.img_width,
                                               self.img_height, current_map)
         podtest2 = self.plot.create_polygon([x_test+5, y_test+5, x_test-5, y_test+5, x_test-5, y_test-5, x_test+5, y_test-5], fill="red")
