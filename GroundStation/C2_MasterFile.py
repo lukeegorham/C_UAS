@@ -495,7 +495,10 @@ def main():
     port_num = 55565
     # radar_message_length = 72
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    server_socket.bind(('192.168.1.50', port_num))
+    try:
+        server_socket.bind(('192.168.1.50', port_num))
+    except:
+        server_socket.bind(('', port_num))
     # server_socket.settimeout(1)
 
     # event and thread activations for Radar Simulator Communication
