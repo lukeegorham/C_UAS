@@ -1,0 +1,213 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV3\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV4 - Mav2 - Working2\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV5\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV6\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV7\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MAVLink.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Csharp software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MAVLink.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV8-add false targets\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\MAVLink.dll
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\bin\x64\Debug\MathNet.Numerics.xml
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojResolveAssemblyReference.cache
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+D:\Acoustic Pod\AcousticPodDocumentation\Radar_Acoustic Pod Simulator Software\AcousticPodRadarSimAsterixV9\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.Cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csprojAssemblyReference.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CoreCompileInputs.cache
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CopyComplete
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\lgorh\Documents\GitHub\C_UAS\AcousticPodRadarSim\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\MathNet.Numerics.dll
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\MAVLink.dll
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\MathNet.Numerics.pdb
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\bin\x64\Debug\MathNet.Numerics.xml
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.AssemblyReference.cache
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.FormAcousticPodSimRadarAsterix.resources
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.cache
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CoreCompileInputs.cache
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CopyComplete
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\SoloSimRadar.pdb

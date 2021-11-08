@@ -498,6 +498,7 @@ def main():
     try:
         server_socket.bind(('192.168.1.50', port_num))
     except:
+        print("Unable to connect to 192.168.1.50 - connecting to localhost...")
         server_socket.bind(('', port_num))
     # server_socket.settimeout(1)
 
@@ -527,7 +528,7 @@ def main():
         global longitude_deg
         global elevation_m_MSL
         if (GUI_Master.lat_val != 0):
-            print(GUI_Master.lat_val)
+            print("Current Latitude Value: ", GUI_Master.lat_val)
         latitude_deg = float(GUI_Master.lat_val)
         longitude_deg = float(GUI_Master.long_val)
         elevation_m_MSL = float(GUI_Master.alt_val)
@@ -543,9 +544,9 @@ def main():
         if (status == -1):
             program.indicate_no_connection()
 
-        # Updating the GUI display after the variables were passed in
-        program.runGUI()
-        # # Tkinter method that actually updates the GUI
+        # Updating the GUI display with new data
+        if not program.runGUI():
+            break
         program.window.update()
         sleep(0.5)
 
