@@ -10,7 +10,8 @@ host_gcam = '192.168.1.26'  # Address of receiver
 port_gcam = 46554
 host_loc = '192.168.1.50'
 port_loc_video = 46554
-global g_cam
+g_cam = None
+v_feed = None
 
 
 # Initialize Networking for Sending Commands
@@ -23,6 +24,7 @@ def init_cmd_send():
 # Listener for Camera Video Feed
 def recv_video():
     # Initialize
+    global v_feed
     context = zmq.Context()
     v_feed = context.socket(zmq.SUB)
     v_feed.bind('tcp://*:' + str(port_loc_video))
@@ -41,6 +43,7 @@ def recv_video():
 
 def main():
     global g_cam
+    global v_feed
     # Start connection to send commands
     init_cmd_send()
     # Start receiving video feed
@@ -53,7 +56,9 @@ def main():
         g_cam.send(bytes(message, 'utf8'))
         data = g_cam.recv(32)
     # Once told to quit, exit nicely
+    g_cam.shutdown(1)
     g_cam.close()
+    v_feed.close()
     quit()
 
 

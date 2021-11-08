@@ -35,7 +35,7 @@ def display_daemon():
             
 
 # Initialize Camera
-print "Initializing Camera..."
+print("Initializing Camera...")
 cap  = cv2.VideoCapture(0)
 cam = Serial('/dev/ttyUSB0',9600) # worked on GPU
 cam.close()
@@ -51,13 +51,13 @@ cam.close()
 
 # Initialize Networking
 # Initialize Connection to Get Commands
-print "Initializing Camera Controls..."
+print("Initializing Camera Controls...")
 socket_cam = socket.socket()
 socket_cmdbind((host_cam, port_cam))
 socket_cmdlisten(10)
 c, addr = socket_cmd.accept()  # blocks/waits for connection from GroundStation1
 # Initialize Connection to Send Video Feed
-print "Attaching Video Feed..."
+print("Attaching Video Feed...")
 context = zmq.Context()
 socket_gs1 = context.socket(zmq.PUB)
 socket_gs1.connect('tcp://' + host_gs1 + ':' + str(port_gs1))  # blocks/waits for connection to GroundStation1
@@ -66,7 +66,7 @@ socket_gs1.connect('tcp://' + host_gs1 + ':' + str(port_gs1))  # blocks/waits fo
 # GroundStation Control Loop (manual controls)
 def GS_Controls():
     global cam  # Camera socket
-    print "Starting process..."
+    print("Starting process...")
     thread_1 = threading.Thread(target=display_daemon, args=(), daemon=True)
     thread_1.start()
     while (keep_processing):
@@ -123,14 +123,14 @@ def GS_Controls():
 
 
     # Close Application Neatly After Breaking From Loop
-    print "Closing application..."
+    print("Closing application...")
     quit()
 
 
 # Use Image Processing to Aim the Camera
 def Auto_Controls():
-    print "Initializing Auto Tracking..."
-    print "Unable to find drone in image, exiting..."
+    print("Initializing Auto Tracking...")
+    print("Unable to find drone in image, exiting...")
     return
 
 

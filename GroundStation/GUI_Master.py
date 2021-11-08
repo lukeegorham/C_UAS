@@ -60,9 +60,6 @@ fm_view = "Sensor Fusion"
 ground_pic_cont = 0
 drone_pic_cont = 0
 
-#map_select = 0
-#option_var = 0
-
 # This method runs all necessary functions to set up the GUI.
 # The rad_array variable is an array of Radar objects (which store data received from radar)
 # The old variable stores the index of the oldest entry of radar_data, as the array is circular

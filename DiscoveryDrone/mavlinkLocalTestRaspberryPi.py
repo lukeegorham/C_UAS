@@ -33,8 +33,8 @@ def Main():
         cntr=0
         while True:
             # example to demonstrate camera tilt command        
-#            SendTilt(tilt)
-#            tilt*=toggle  # used to alternate tilt angles for test
+            SendTilt(tilt)
+            tilt*=toggle  # used to alternate tilt angles for test
             # example to set camera tilt control back to RC pilot
 #            SetGimbalRc()
             # example to set ROI for camera
