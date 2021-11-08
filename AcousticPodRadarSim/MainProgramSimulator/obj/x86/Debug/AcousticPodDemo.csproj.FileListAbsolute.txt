@@ -1,0 +1,112 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV2\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV3Cleanup\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV4\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV5\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV6\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV7\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV8 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x86\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
