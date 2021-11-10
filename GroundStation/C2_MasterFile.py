@@ -330,7 +330,7 @@ class CntlDroneMsgThread(Thread):
 
 
 ## Port Information for Discovery Drone Images ##
-HOST = '192.168.1.50';
+HOST = '';
 PORT = 44555;
 jpeg_quality = 80
 
@@ -349,7 +349,7 @@ except socket.error:
     sys.exit()
 
 ## Creation of Port for the reception of Ground Camera Messages ##
-HOSTG = '192.168.1.50';
+HOSTG = '';
 PORTG = 5566;
 jpeg_qualityG = 80
 
@@ -410,7 +410,7 @@ MsgHeadrC = int("1e91",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
 # Creation of the port to send messages to the Discovery Drone from C2
-hostD = '192.168.1.20'
+hostD = '192.168.1.255'
 portD = 45454  # defined in the Message Structure between C2 and Discovery Drone file
 global latitude_deg
 latitude_deg = 0
@@ -544,9 +544,9 @@ def main():
         if (status == -1):
             program.indicate_no_connection()
 
-        # Updating the GUI display with new data
-        if not program.runGUI():
-            break
+        # Updating the GUI display after the variables were passed in
+        program.runGUI()
+        # # Tkinter method that actually updates the GUI
         program.window.update()
         sleep(0.5)
 
@@ -593,11 +593,11 @@ def readDiscoverDroneMsg():
         # print(azimuth)
 
         # Beginning of logic to display the Discovery Drone in an Open CV window
-        # frame1 = np.asarray(bytearray(jpg_buffer), dtype="uint8")
+        frame1 = np.asarray(bytearray(jpg_buffer), dtype="uint8")
 
-        # frame1 = cv2.imdecode(frame1, cv2.IMREAD_COLOR)
-        # frame = imutils.resize(frame1, 640)
-        # cv2.imshow("frame", frame)
+        frame1 = cv2.imdecode(frame1, cv2.IMREAD_COLOR)
+        frame = imutils.resize(frame1, 640)
+        cv2.imshow("frame", frame)
         # cv2.imwrite("Picture1.jpg", frame)
         # cv2.imwrite('DiscoveryDrone_' + str(int(datetime.datetime.now(tz=pytz.utc).timestamp())) +
         #             '_image_' + str(imageCtr) + '.jpg', frame)
@@ -687,9 +687,9 @@ def jogGndCamera():
     global trueUAVDictionary
     # global True_UAV_Index
     # openCV with display a camera icon that must be clicked on to maneuver the camera
-    # buster = cv2.imread('cameraicon.jpg')
-    # busterResize = imutils.resize(buster, 300)
-    # cv2.imshow("Control", busterResize)
+    buster = cv2.imread('cameraicon.jpg')
+    busterResize = imutils.resize(buster, 300)
+    cv2.imshow("Control", busterResize)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
     keyG = cv2.waitKey(1) & 0xFF
