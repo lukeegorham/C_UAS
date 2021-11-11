@@ -10,3 +10,7 @@ Tests/.vs/Tests/v16/.suo
 AcousticPodRadarSim/.vs/AcousticPodSimRadarAsterix/v16/.suo
 *.cache
 *.pdb
+/venv/
+/Tests/.idea/
+/AcousticPodRadarSim/.vs/
+/GroundStation/.idea/

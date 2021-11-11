@@ -27,3 +27,5 @@ pip install pyserial
 pip install zmq
 pip install base64
 
+PAUSE
+

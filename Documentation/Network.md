@@ -1,42 +1,40 @@
-# C2 Network
-* Author: CUAS Capstone Team USAFA C/O 2022
-* Date: 2021-2022 School Year
+# Network Documentation
 
----
-### DESCRIPTION:
-> The C2 system consists of two grounstation laptops, one Raspberry PI to control the ground camera, a central Raspberry PI hub (for the acoustic sensors), and one ethernet-to-wifi antenna to control the Discovery Drone.
+### Description:
+The C2 system consists of two grounstation laptops, one Raspberry PI to control the ground camera, a central Raspberry PI hub (for the acoustic sensors), and one ethernet-to-wifi antenna system (comprised of two MicroHard radios) to control the Discovery Drone.
 
->All computers are organized with static IP addresses and an unmanaged ("dumb") switch is used to connect each system as a hub-and-spoke local network.
+All computers are organized with static IP addresses and an unmanaged ("dumb") switch is used to connect each system as a hub-and-spoke local network.
 
->Two 12V Lead-Acid batteries are used to power all the groundstation equipment, using the provided wires and adapters. One battery powers the Camera, Raspberry PI (which controls the camera), and the bullet wifi antenna POE unit. The other battery powers the ethernet switch. The two groundstation laptops run off of their included batteries. 
+Two 12V Lead-Acid batteries are used to power all the groundstation equipment, using the provided wires and adapters. One battery powers the Camera, Raspberry PI (which controls the camera), and the ethernet-wifi antenna. The other battery powers the ethernet switch. The two groundstation laptops run off of their included batteries. 
 
----
-### COMPONENTS:
-#### Groundstation Laptop 1: *(Dell ToughBook)*
+If network configuration (especially the link to the discovery drone) is lost or needs to be reconfigured from scratch, reference [this](InstallNetConfig.md) file.
+
+## Components:
+#### Groundstation Laptop 1: *(Dell ToughBook running Windows 10)*
 ```?
-IP Address: 192.168.1.50/24     (can set DNS, Gateway to 192.168.1.1)
+IP Address: 192.168.1.50/24     (set DNS & Gateway to 192.168.1.1)
 Ports:
     56555 - List
 ```
 
-#### Groundstation Laptop 2: *(Dell ToughBook)*
+#### Groundstation Laptop 2: *(Dell ToughBook running Windows 10)*
 ```?
-IP Address: 192.168.1.51/24     (can set DNS, Gateway to 192.168.1.1)
+IP Address: 192.168.1.51/24     (set DNS & Gateway to 192.168.1.1)
 Ports:
     56555 - List
 ```
 
-#### Camera Controller: *(Raspberry PI)*
+#### Camera Controller: *(Raspberry PI running Raspian)*
 ```?
-IP Address: 192.168.1.26/24
+IP Address: 192.168.1.26/24     (set DNS & Gateway to auto, disable IPv6)
 Ports:
     56555 - [TCP] Listen for commands from GS1
     XXXXX - [UDP] Send video feed to GS1
 ```
 
-#### Acoustics Hub: *(Raspberry PI)*
+#### Acoustics Hub: *(Raspberry PI running Raspian)*
 ```?
-IP Address: 192.168.1.31/24     (can set DNS, Gateway to 192.168.1.1)
+IP Address: 192.168.1.31/24     (set DNS & Gateway to auto, disable IPv6)
 Ports:
     XXXXX - [TCP] Sends target location to GS2
                 Messages sent every XXX seconds for targets
@@ -45,24 +43,43 @@ Ports:
 
 #### Radar Unit: *(L-Star)*
 ```?
-IP Address: 192.168.1.XX/24     (can set DNS, Gateway to 192.168.1.1)
+IP Address: 192.168.1.XX/24
 Ports:
     XXXXX - Sends locations of targets to GS2
 ```
 
-#### Ethernet-Wifi Antenna: *(Ubiquiti Bullet M2)*
+#### Ethernet-Drone Master Radio: *(MicroHard pDDL2450 Connected to main switch)*
 ```?
-IP Address: 192.168.1.XX/24     (can set DNS, Gateway to 192.168.1.1)
-Ports:
-    XXXXX - Sends locations of targets to GS2
+LAN IP Address: 192.168.1.5/24     (set DNS & Gateway to 192.168.1.1)
+RF Data: *MASTER*
+     Frequency - Ch22 / 2423MHz
+     Bandwidth - 8MHz
+     Power - 30dBm
+     Auth - AES128  Password: capstone
+
+Login:
+     Username: admin
+     Password: capstone
 ```
 
----
-### SENDING MESSAGES TO DISCOVERY DRONE:
-> General paragraph explaining methods.
+#### Ethernet-Drone Slave Radio: *(MicroHard pDDL2450 Connected to Discovery Drone Raspberry PI)*
+```?
+LAN IP Address: 192.168.1.6/24     (can set DNS & Gateway to 192.168.1.1)
+RF Data: *SLAVE*
+     Frequency - Ch22 / 2423MHz
+     Bandwidth - 8MHz
+     Power - 30dBm
+     Auth - AES128  Password: capstone
 
----
-### DEBUGGING:
+Login:
+     Username: admin
+     Password: capstone
+```
+
+## Sending Messages to Discovery Drone:
+The GS1 laptop can directly "see" the Discovery Drone's Raspberry PI unit through the MicroHard radios. Essentially, these radios are able to emulate a wired ethernet connection between the Raspberry PI on the drone to the switch. Therefore, any hardware can send IP packets to the drone via its IP address `192.168.1.25`.
+
+## Debugging:
 Debugging is very difficult with networking. But there are some key things to diagnosing your network.
 
 1) Ensure that each component has the proper static IP address
@@ -71,9 +88,9 @@ Debugging is very difficult with networking. But there are some key things to di
    1) Python sometimes doesn't like to bind to blank addresses `''` so it's better to specify your own address so it doesn't try and bind the loopback address
 4) Ping the address you are trying to connect to (IOT ping Windows devices, you have to allow it in the firewall)
 
----
-### Misc Notes:
+## Misc Notes:
 * The IP addresses each have `/24` appended to indicate `Netmask: 255.255.255.0`
 * The acoustic pods are linked via 900MHz telemetry
-* POE - Power Over Ethernet, used to power the ethernet-wifi antenna
 * If launching a script via ssh -> call command, you cannot open a cv2 window on the server from a login shell. Instead, comment out those lines (in the server code) and ensure that you are sending the video feed to view on a cv2 window on the client.
+
+-- Back to [master_documentation](../Documentation/Master_Documentation.md) --
