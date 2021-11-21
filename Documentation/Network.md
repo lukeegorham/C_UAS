@@ -14,7 +14,14 @@ If network configuration (especially the link to the discovery drone) is lost or
 ```?
 IP Address: 192.168.1.50/24     (set DNS & Gateway to 192.168.1.1)
 Ports:
-    56555 - List
+    56555 - ??? List
+    55565 - [TCP] Receive messages from Simulated Radar
+    46554 - [46555] [TCP] Send Camera commands to Camera Controller
+    46554 - [5566?] [UDP] Receive Camera feed grom Camera Controller
+    44555 - [65536] [TCP] Receive Discovery Drone information
+    65536 - [45454] [5666] [TCP] Send commands to Discovery Drone
+    XXXXX - [TCP] Receive target information from GS2
+    XXXXX - [TCP] Receive acoustic messages from Acoustic Hub
 ```
 
 #### Groundstation Laptop 2: *(Dell ToughBook running Windows 10)*
@@ -28,8 +35,8 @@ Ports:
 ```?
 IP Address: 192.168.1.26/24     (set DNS & Gateway to auto, disable IPv6)
 Ports:
-    56555 - [TCP] Listen for commands from GS1
-    XXXXX - [UDP] Send video feed to GS1
+    46554 - [TCP] Listen for commands from GS1
+    46554 - [UDP] Send video feed to GS1
 ```
 
 #### Acoustics Hub: *(Raspberry PI running Raspian)*
@@ -74,6 +81,15 @@ RF Data: *SLAVE*
 Login:
      Username: admin
      Password: capstone
+```
+
+#### Discovery Drone:
+```?
+IP Address: 192.168.1.25/24
+Ports:
+   44555 - [UDP] send status/pos/video to GS1
+    5666 - Unused... [TCP] receive messages from GS1?
+   65536 - [TCP] receive commands from GS1
 ```
 
 ## Sending Messages to Discovery Drone:

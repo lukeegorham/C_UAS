@@ -410,7 +410,7 @@ MsgHeadrC = int("1e91",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
 # Creation of the port to send messages to the Discovery Drone from C2
-hostD = '192.168.1.255'
+hostD = '192.168.1.25'
 portD = 45454  # defined in the Message Structure between C2 and Discovery Drone file
 global latitude_deg
 latitude_deg = 0
@@ -473,7 +473,7 @@ MsgHeadrD = int("a33e",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
 ## Creation of the port to send messages to the Discovery Drone from C2
-hostDctrl = '192.168.1.255'
+hostDctrl = '192.168.1.25'
 portDctrl = 5666  # defined in the Message Structure between C2 and Discovery Drone file
 
 
