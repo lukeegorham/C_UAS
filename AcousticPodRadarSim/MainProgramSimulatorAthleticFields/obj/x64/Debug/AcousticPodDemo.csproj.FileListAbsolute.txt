@@ -1,0 +1,27 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio - TestFile\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\GeoCoordinateSystem.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\bin\x64\Debug\GeoCoordinateSystem.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\AcousticPodDemo.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\AcousticPodDemo.FormAcousticPodDemo.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\AcousticPodDemo.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemoV9 - MicrohardRadio\MainProgram\obj\x64\Debug\AcousticPodDemo.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\bin\x64\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodRadarSimAsterix\MainProgram\obj\x64\Debug\SoloSimRadar.pdb

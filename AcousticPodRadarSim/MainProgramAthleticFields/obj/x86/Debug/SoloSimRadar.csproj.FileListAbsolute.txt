@@ -1,0 +1,106 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\bin\x86\Debug\SoloTracker.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\bin\x86\Debug\SoloTracker.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\bin\x86\Debug\SoloTracker.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloTracker.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloTracker.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\JccSimulator\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SimulatedRadarOfSolos\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Copy\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - grouped message\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\SoloSimRadar.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\MathNet.Numerics.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\MAVLink.dll
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\bin\x86\Debug\MathNet.Numerics.xml
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.FormSoloSimRadar.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.Properties.Resources.resources
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\SimulatedRadarOfSolos - Solo Commands - GPS timing - TargetOffset\MainProgram\obj\x86\Debug\SoloSimRadar.csproj.GenerateResource.Cache
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\bin\x86\Debug\SoloSimRadar.exe.config
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\SoloSimRadar.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\AcousticPodDemo\MainProgram\obj\x86\Debug\SoloSimRadar.pdb

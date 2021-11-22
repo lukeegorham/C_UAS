@@ -208,6 +208,5 @@ C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj
 C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.Properties.Resources.resources
 C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.GenerateResource.cache
 C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CoreCompileInputs.cache
-C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\AcousticPodSimRadarAsterix.csproj.CopyComplete
 C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\SoloSimRadar.exe
 C:\Users\cUAS_Laptop2\Desktop\C_UAS\AcousticPodRadarSim\MainProgramSimulator\obj\x64\Debug\SoloSimRadar.pdb
