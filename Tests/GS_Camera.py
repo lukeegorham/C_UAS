@@ -8,7 +8,7 @@ import base64
 # Global Variables
 host_gcam = '192.168.1.26'  # Address of receiver
 port_gcam = 46554
-host_loc = '192.168.1.50'
+host_loc = ''
 port_loc_video = 46554
 g_cam = None
 v_feed = None
@@ -36,7 +36,7 @@ def recv_video():
         npimg = np.fromstring(img, dtype=np.uint8)  # Convert frame to Numpy image
         source = cv2.imdecode(npimg, 1)             # Decode Numpy image to frame to display with cv2
         if source is None:
-            print(f'Nothing To Display')
+            print("Nothing To Display")
         cv2.imshow("Live Feed", source)
         cv2.waitKey(1)
 
