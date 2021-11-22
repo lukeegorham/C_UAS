@@ -16,11 +16,11 @@ This file is a running list of all known issues, sorted by subsystem
 - 
 
 ## Discovery Drone
-- Buid a 650 drone
+- Build a 650 drone
 
 ## Ground Camera
 - Exposure set too high
-- Unable to point given direction and elevation
+- Missing functionality to point given a direction and elevation
 
 ## GUI
 - ~40sec delay in display of radar location

@@ -35,8 +35,9 @@ Ports:
 ```?
 IP Address: 192.168.1.26/24     (set DNS & Gateway to auto, disable IPv6)
 Ports:
-    46554 - [TCP] Listen for commands from GS1
+    46555 - [TCP] Listen for commands from GS1
     46554 - [UDP] Send video feed to GS1
+     5566 - [TCP] Send messages to GS1
 ```
 
 #### Acoustics Hub: *(Raspberry PI running Raspian)*
@@ -83,13 +84,12 @@ Login:
      Password: capstone
 ```
 
-#### Discovery Drone:
+#### Discovery Drone:  *(Raspberry PI running Raspian)*
 ```?
 IP Address: 192.168.1.25/24
 Ports:
    44555 - [UDP] send status/pos/video to GS1
-    5666 - Unused... [TCP] receive messages from GS1?
-   65536 - [TCP] receive commands from GS1
+    5666 - [TCP] receive messages from GS1
 ```
 
 ## Sending Messages to Discovery Drone:
