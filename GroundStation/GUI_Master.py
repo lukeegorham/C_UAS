@@ -433,11 +433,6 @@ class C2GUI:
         self.draw_radarEstimate()
         self.draw_DiscoveryDroneoffset()
 
-        x_test, y_test = normalize_locs(-104.887928, 39.015772, self.img_width,
-                                              self.img_height, current_map)
-        podtest2 = self.plot.create_polygon([x_test+5, y_test+5, x_test-5, y_test+5, x_test-5, y_test-5, x_test+5, y_test-5], fill="red")
-        self.plot.tag_raise(podtest2)
-
         # self.draw_breadcrumb()
         # Receiving and displaying images received from the discovery drone
         # (This might need to eventually be put into the C2 code instead)
