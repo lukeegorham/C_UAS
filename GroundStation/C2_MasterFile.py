@@ -330,8 +330,8 @@ class CntlDroneMsgThread(Thread):
 
 
 ## Port Information for Discovery Drone Images ##
-HOST = '';
-PORT = 44555;
+HOST = ''
+PORT = 44555
 jpeg_quality = 80
 
 # create socket for Discovery Drone Images
@@ -349,8 +349,8 @@ except socket.error:
     sys.exit()
 
 ## Creation of Port for the reception of Ground Camera Messages ##
-HOSTG = '';
-PORTG = 5566;
+HOSTG = ''
+PORTG = 5566
 jpeg_qualityG = 80
 
 # create socket for ground camera messages
@@ -364,7 +364,7 @@ except socket.error:
 try:
     receiverG.bind((HOSTG, PORTG))  # Ryan will never find this
 except socket.error:
-    print("no bind 367")
+    print("no bind")
     sys.exit()
 
 # ############################################################################################
@@ -381,7 +381,7 @@ global longitude_degC
 global elevation_m_MSLC
 
 # Creation of the port for sending messages from C2 to the Ground Camera
-hostC = '192.168.1.255'
+hostC = '192.168.1.25'
 portC = 46555  # System defined port to handle communications from C2 to Ground Camera
 # senderC = imagezmq.ImageSender(connect_to='tcp://192.168.1.75:5555')
 # create dgram udp socket
