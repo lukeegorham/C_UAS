@@ -21,9 +21,9 @@ import pytz
 # Global variable that indicates whether we have a camera feed for the GUI
 # It must be a global because the receive_imagery function is outside the C2GUI class
 camera = 1
-lat_val = 0
-long_val = 0
-alt_val = 0
+lat_waypoint = 0
+long_waypoint = 0
+alt_waypoint = 0
 status_t = 0
 status_a = 0
 rtb_flag = 0
@@ -232,7 +232,7 @@ class C2GUI:
         self.speed_title = Label(text="Discovery Drone Speed Input")
         self.speed_button = tk.Button(text="Update Speed", command=self.save_speed)
         # self.cur_pos = Label(
-        # text=f"Current Latitude: {lat_val}     Current Longitude: {long_val}       Current Altitude: {alt_val}")
+        # text=f"Current Latitude: {lat_waypoint}     Current Longitude: {long_waypoint}       Current Altitude: {alt_waypoint}")
         self.true_breadcrumb = tk.Checkbutton(text="True UAV Breadcrumb", command=self.toggle_true_breadcrumb)
         self.pod_breadcrumb = tk.Checkbutton(text="Acoustic Breadcrumb", command=self.toggle_acoustic_breadcrumb)
         self.acoustic_dot = tk.Checkbutton(text="Acoustic Position", command=self.toggle_acoustic_dot)
@@ -956,16 +956,16 @@ class C2GUI:
         long_input.insert(0, "Long")
         alt_input = Entry(self.newWindow)
         alt_input.pack()
-        alt_input.insert(0, "alt")
+        alt_input.insert(0, "Alt")
 
         def save_waypoint():
-            global lat_val
-            global long_val
-            global alt_val
-            lat_val = lat_input.get()
-            long_val = long_input.get()
-            alt_val = alt_input.get()
-            # print(lat_val, long_val, alt_val)
+            global lat_waypoint
+            global long_waypoint
+            global alt_waypoint
+            lat_waypoint = lat_input.get()
+            long_waypoint = long_input.get()
+            alt_waypoint = alt_input.get()
+            print(lat_waypoint, long_waypoint, alt_waypoint)  # DEBUG
 
         # Button for saving data
         save_button = tk.Button(self.newWindow, text="Save waypoint", command=save_waypoint)
@@ -1069,7 +1069,7 @@ class C2GUI:
             alt_gnd = alt_input.get()
             self.gnd_pos = Label(self.gndWindow, text="Location Updated").pack()
             # self.gnd_pos.place(x=300, y=670)
-            # print(lat_val, long_val, alt_val)
+            # print(lat_gnd, long_gnd, alt_gnd)
 
         # Button for saving data
         save_button = tk.Button(self.gndWindow, text="Save location", command=save_gnd_loc)
