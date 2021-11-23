@@ -15,6 +15,7 @@ import numpy as np  # Make sure NumPy is loaded before it is used in the callbac
 # import pymavlink
 import GUI_Master
 from threading import Thread, Event
+import threading
 # from bitstring import BitArray
 # import keyboard
 # import argparse
@@ -283,13 +284,15 @@ class TimerThread(Thread):
 
 
 # Thread that dictates the rate at which messages are received from the Discovery Drone
-class RecvDroneMsgThread(Thread):
+class RecvDroneMsgThread(threading.Thread):
     def __init__(self, event):
         Thread.__init__(self)
-        self.stopped = event
+        self.stopped = threading.Event()
 
     def run(self):
+        print("hit1")
         while not self.stopped.is_set():
+            print("hit2")
             readDiscoverDroneMsg()
 
 
@@ -562,6 +565,7 @@ def readDiscoverDroneMsg():
     # try:
     # receive RPi name and frame from the RPi and acknowledge
     # the receipt
+    print("//////////////////////////////////////////////////////////YOU DINGUS THIS SHIT IS RUNNING")
     msgIn, (address, port) = receiver.recvfrom(65536)
     MsgHeadr = int("a59f", 16)  # unique message header
     metaFormat = '<HHddddddddHddddhhh'  # message format determined by specification
@@ -571,6 +575,7 @@ def readDiscoverDroneMsg():
     temp = msgIn[0:2]
     recvHdr = struct.unpack('<H', temp)[0]  # extracting the message header from the recieved message
     # print(MsgHeadr, recvHdr)
+
     if (recvHdr == MsgHeadr):
         # get metadata size
         temp = msgIn[2:4]
