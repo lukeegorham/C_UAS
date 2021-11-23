@@ -965,7 +965,7 @@ class C2GUI:
             lat_val = lat_input.get()
             long_val = long_input.get()
             alt_val = alt_input.get()
-            # print(lat_val, long_val, alt_val)
+            print(lat_val, long_val, alt_val)
 
         # Button for saving data
         save_button = tk.Button(self.newWindow, text="Save waypoint", command=save_waypoint)
