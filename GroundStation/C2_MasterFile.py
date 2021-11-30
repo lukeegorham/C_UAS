@@ -1,21 +1,20 @@
-import tkinter as tk
+# import tkinter as tk
 from tkinter import *
 # from unittest import case
-
 # from PIL import ImageTk, Image
-# import threading
+import threading
 import datetime
 # from datetime import datetime
 import pytz
 import socket
-from time import sleep, time
+from time import sleep
 import struct
 import numpy as np  # Make sure NumPy is loaded before it is used in the callback
 # import math
 # import pymavlink
 import GUI_Master
 from threading import Thread, Event
-import threading
+# import threading
 # from bitstring import BitArray
 # import keyboard
 # import argparse
@@ -26,176 +25,10 @@ import csv
 from pyproj import Proj
 # from pandas import DataFrame
 import capstone2018_sensor_fusion2 as Sensor
+import cv2
+import threading
 
 # import LLtoUTM
-
-# # # # # INSERTED FOLLOWING LINES in place of LLtoUTM
-# Found code snipped at : http://www.geo.uib.no/polarhovercraft/uploads/Main/LatLongUTMconversion.py
-
-from math import pi, sin, cos, tan, sqrt
-
-# Defense Mapping Agency. 1987b. DMA Technical Report: Supplement to Department of Defense World Geodetic System
-# 1984 Technical Report. Part I and II. Washington, DC: Defense Mapping Agency
-# def LLtoUTM(int ReferenceEllipsoid, const double Lat, const double Long,
-# double &UTMNorthing, double &UTMEasting, char* UTMZone)
-
-_deg2rad = pi / 180.0
-_rad2deg = 180.0 / pi
-
-_EquatorialRadius = 2
-_eccentricitySquared = 3
-
-_ellipsoid = [
-    #  id, Ellipsoid name, Equatorial Radius, square of eccentricity
-    # first once is a placeholder only, To allow array indices to match id numbers
-    [-1, "Placeholder", 0, 0],
-    [1, "Airy", 6377563, 0.00667054],
-    [2, "Australian National", 6378160, 0.006694542],
-    [3, "Bessel 1841", 6377397, 0.006674372],
-    [4, "Bessel 1841 (Nambia] ", 6377484, 0.006674372],
-    [5, "Clarke 1866", 6378206, 0.006768658],
-    [6, "Clarke 1880", 6378249, 0.006803511],
-    [7, "Everest", 6377276, 0.006637847],
-    [8, "Fischer 1960 (Mercury] ", 6378166, 0.006693422],
-    [9, "Fischer 1968", 6378150, 0.006693422],
-    [10, "GRS 1967", 6378160, 0.006694605],
-    [11, "GRS 1980", 6378137, 0.00669438],
-    [12, "Helmert 1906", 6378200, 0.006693422],
-    [13, "Hough", 6378270, 0.00672267],
-    [14, "International", 6378388, 0.00672267],
-    [15, "Krassovsky", 6378245, 0.006693422],
-    [16, "Modified Airy", 6377340, 0.00667054],
-    [17, "Modified Everest", 6377304, 0.006637847],
-    [18, "Modified Fischer 1960", 6378155, 0.006693422],
-    [19, "South American 1969", 6378160, 0.006694542],
-    [20, "WGS 60", 6378165, 0.006693422],
-    [21, "WGS 66", 6378145, 0.006694542],
-    [22, "WGS-72", 6378135, 0.006694318],
-    [23, "WGS-84", 6378137, 0.00669438]
-]
-
-
-def LLtoUTM(ReferenceEllipsoid, Lat, Long):
-    # converts lat/long to UTM coords.  Equations from USGS Bulletin 1532
-    # East Longitudes are positive, West longitudes are negative.
-    # North latitudes are positive, South latitudes are negative
-    # Lat and Long are in decimal degrees
-    # Written by Chuck Gantz- chuck.gantz@globalstar.com
-
-    a = _ellipsoid[ReferenceEllipsoid][_EquatorialRadius]
-    eccSquared = _ellipsoid[ReferenceEllipsoid][_eccentricitySquared]
-    k0 = 0.9996
-
-    # Make sure the longitude is between -180.00 .. 179.9
-    LongTemp = (Long + 180) - int((Long + 180) / 360) * 360 - 180  # -180.00 .. 179.9
-
-    LatRad = Lat * _deg2rad
-    LongRad = LongTemp * _deg2rad
-
-    ZoneNumber = int((LongTemp + 180) / 6) + 1
-
-    if Lat >= 56.0 and Lat < 64.0 and LongTemp >= 3.0 and LongTemp < 12.0:
-        ZoneNumber = 32
-
-    # Special zones for Svalbard
-    if Lat >= 72.0 and Lat < 84.0:
-        if LongTemp >= 0.0 and LongTemp < 9.0:
-            ZoneNumber = 31
-        elif LongTemp >= 9.0 and LongTemp < 21.0:
-            ZoneNumber = 33
-        elif LongTemp >= 21.0 and LongTemp < 33.0:
-            ZoneNumber = 35
-        elif LongTemp >= 33.0 and LongTemp < 42.0:
-            ZoneNumber = 37
-
-    LongOrigin = (ZoneNumber - 1) * 6 - 180 + 3  # +3 puts origin in middle of zone
-    LongOriginRad = LongOrigin * _deg2rad
-
-    # compute the UTM Zone from the latitude and longitude
-    UTMZone = "%d%c" % (ZoneNumber, _UTMLetterDesignator(Lat))
-
-    eccPrimeSquared = (eccSquared) / (1 - eccSquared)
-    N = a / sqrt(1 - eccSquared * sin(LatRad) * sin(LatRad))
-    T = tan(LatRad) * tan(LatRad)
-    C = eccPrimeSquared * cos(LatRad) * cos(LatRad)
-    A = cos(LatRad) * (LongRad - LongOriginRad)
-
-    M = a * ((1
-              - eccSquared / 4
-              - 3 * eccSquared * eccSquared / 64
-              - 5 * eccSquared * eccSquared * eccSquared / 256) * LatRad
-             - (3 * eccSquared / 8
-                + 3 * eccSquared * eccSquared / 32
-                + 45 * eccSquared * eccSquared * eccSquared / 1024) * sin(2 * LatRad)
-             + (15 * eccSquared * eccSquared / 256 + 45 * eccSquared * eccSquared * eccSquared / 1024) * sin(4 * LatRad)
-             - (35 * eccSquared * eccSquared * eccSquared / 3072) * sin(6 * LatRad))
-
-    UTMEasting = (k0 * N * (A + (1 - T + C) * A * A * A / 6
-                            + (5 - 18 * T + T * T + 72 * C - 58 * eccPrimeSquared) * A * A * A * A * A / 120)
-                  + 500000.0)
-
-    UTMNorthing = (k0 * (M + N * tan(LatRad) * (A * A / 2 + (5 - T + 9 * C + 4 * C * C) * A * A * A * A / 24
-                                                + (61
-                                                   - 58 * T
-                                                   + T * T
-                                                   + 600 * C
-                                                   - 330 * eccPrimeSquared) * A * A * A * A * A * A / 720)))
-
-    if Lat < 0:
-        UTMNorthing = UTMNorthing + 10000000.0;  # 10000000 meter offset for southern hemisphere
-    return (UTMZone, UTMEasting, UTMNorthing)
-
-
-def _UTMLetterDesignator(Lat):
-    # This routine determines the correct UTM letter designator for the given latitude
-    # returns 'Z' if latitude is outside the UTM limits of 84N to 80S
-    # Written by Chuck Gantz- chuck.gantz@globalstar.com
-
-    if 84 >= Lat >= 72:
-        return 'X'
-    elif 72 > Lat >= 64:
-        return 'W'
-    elif 64 > Lat >= 56:
-        return 'V'
-    elif 56 > Lat >= 48:
-        return 'U'
-    elif 48 > Lat >= 40:
-        return 'T'
-    elif 40 > Lat >= 32:
-        return 'S'
-    elif 32 > Lat >= 24:
-        return 'R'
-    elif 24 > Lat >= 16:
-        return 'Q'
-    elif 16 > Lat >= 8:
-        return 'P'
-    elif 8 > Lat >= 0:
-        return 'N'
-    elif 0 > Lat >= -8:
-        return 'M'
-    elif -8 > Lat >= -16:
-        return 'L'
-    elif -16 > Lat >= -24:
-        return 'K'
-    elif -24 > Lat >= -32:
-        return 'J'
-    elif -32 > Lat >= -40:
-        return 'H'
-    elif -40 > Lat >= -48:
-        return 'G'
-    elif -48 > Lat >= -56:
-        return 'F'
-    elif -56 > Lat >= -64:
-        return 'E'
-    elif -64 > Lat >= -72:
-        return 'D'
-    elif -72 > Lat >= -80:
-        return 'C'
-    else:
-        return 'Z'  # if the Latitude is outside the UTM limits
-
-
-# # # # # # END OF INSERTED LINES
 
 
 # global variables
@@ -207,7 +40,7 @@ true_UAV_pos = []  # an array of the positions of the UAV based on MAVLINK
 radar_array_type34 = []  # an array of type 34 asterix messages
 radar_Dictionary_type48 = {}  # an Dictionary of type 48 asterix messages
 predictedPositions_Dictionary = {}  # Dictionary containing the sensor fused positions from the radar
-DiscoveryDroneOffset_dict = {}  # Dictionary containing the desired Discovery Drone positions (from sensor fusion) with offset enabled.
+DiscoveryDroneOffset_dict = {}  # Dictionary of the desired drone positions (from sensor fusion) with offset enabled.
 podDictionary = {}  # Dictionary of Acoustic Pod Objects
 trueUAVDictionary = {}
 TgtEstimatorDict = {}
@@ -215,10 +48,21 @@ radar_Dictionary_type34 = {}
 discoveryDroneDict = {}  # A Dictionary containing all of the information from the discovery drone
 filter_exists = False
 filtersDictionary = {}
+global target_lat_correct
+global target_long_correct
+global target_alt_correct
+global followMeSelection
+global True_UAV_Index
+global TgtDistX
+global TgtDisty
+global TgtAlt
+global radar_data_48, radar_data_34
+global target_filter
 
 LattimeOffset = [None, None, None]
 LongtimeOffset = [None, None, None]
 AlttimeOffset = [None, None, None]
+
 
 filename = 'LogTest.txt'  # log file meant to record data from the dictionaries and flight tests
 
@@ -237,7 +81,6 @@ status = 1
 # logfiles
 # c2todrones_log = 'c2todrones_' + str(int(datetime.datetime.now(tz=pytz.utc).timestamp())) + '.bin'
 
-global imageCtr
 imageCtr = 0
 
 global disc_lat
@@ -250,12 +93,9 @@ global RadarUTMx
 global RadarUTMy
 global correct_alt_34
 
-# global RadarFollow  # variable to turn automatic tracking on and off
-# RadarFollow = False
-# global filter_exists
-# filter_exists = False
+RadarFollow = False
 # global filter_id
-# filter_id = 1
+filter_id = 1
 global conversion
 global GroundStationUTMx, GroundStationUTMy, GroundStationUTMz
 # global filter_Expiration
@@ -274,9 +114,10 @@ syncTime_s = 0.1  # update the screen time every 1 second
 
 # Thread Class that dictates the Situational Awareness Map Refresh
 class TimerThread(Thread):
-    def __init__(self, event, program):
+    def __init__(self, event):
         Thread.__init__(self)
         self.stopped = event
+
     #   self.program = program
     def run(self):
         while not self.stopped.wait(syncTime_s):
@@ -285,14 +126,12 @@ class TimerThread(Thread):
 
 # Thread that dictates the rate at which messages are received from the Discovery Drone
 class RecvDroneMsgThread(threading.Thread):
-    def __init__(self, event):
+    def __init__(self):
         Thread.__init__(self)
         self.stopped = threading.Event()
 
     def run(self):
-        print("hit1")
         while not self.stopped.is_set():
-            print("hit2")
             readDiscoverDroneMsg()
 
 
@@ -327,12 +166,12 @@ class CntlDroneMsgThread(Thread):
 
     #
     def run(self):
-        while (not self.stopped.is_set()):
+        while not self.stopped.is_set():
             DiscoveryDroneControl()
             sleep(0.1)
 
 
-## Port Information for Discovery Drone Images ##
+# Port Information for Discovery Drone Images ##
 HOST = ''
 PORT = 44555
 jpeg_quality = 80
@@ -351,7 +190,7 @@ except socket.error:
     print("no bind")
     sys.exit()
 
-## Creation of Port for the reception of Ground Camera Messages ##
+# Creation of Port for the reception of Ground Camera Messages ##
 HOSTG = ''
 PORTG = 5566
 jpeg_qualityG = 80
@@ -372,8 +211,7 @@ except socket.error:
 
 # ############################################################################################
 # Begin Code for Camera Control
-# define the global variables that will be used to move the camera based on lattitude, longitude, and altitude calculations
-import cv2, queue, threading, time
+# define the global variables that will be used to move the camera based on lattitude, longitude, and altitude calcs
 
 global latitude_degC
 # latitude_degC=39.008942
@@ -415,7 +253,6 @@ MsgHeadrC = int("1e91",
 # Creation of the port to send messages to the Discovery Drone from C2
 hostD = '192.168.1.25'
 portD = 45454  # defined in the Message Structure between C2 and Discovery Drone file
-global latitude_deg
 latitude_deg = 0
 # latitude_deg=39.008942
 # latitude_input = input("Discover Lat =: ") #command line input for first Discovery Drone waypoint
@@ -427,14 +264,12 @@ latitude_deg = 0
 
 
 # print(type(latitude_deg))
-global longitude_deg
 longitude_deg = 0
 # longitude_deg=-104.879922
 
 # long_input = input("Discover Long =: ")#command line input for first Discovery Drone waypoint
 # longitude_deg =float(long_input) #input conversion to decimal
 # longitude_deg = float(GUI_Master.long_val)
-global elevation_m_MSL
 elevation_m_MSL = 0
 # elevation_m_MSL=2155.1
 # alt_int = input("Discover Alt =: ")#command line input for first Discovery Drone waypoint
@@ -475,16 +310,23 @@ msgFormatD = '<HHdHHHHddd'  # defines the message format for the messages sent t
 MsgHeadrD = int("a33e",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
-## Creation of the port to send messages to the Discovery Drone from C2
+# Creation of the port to send messages to the Discovery Drone from C2
 hostDctrl = '192.168.1.25'
 portDctrl = 5666  # defined in the Message Structure between C2 and Discovery Drone file
+
+global server_socket
+global disc_down_socket
+client_socket = None
+discovery_uplink_port = None
+discovery_img_recieve = None
+discovery_images_socket = None
 
 
 def main():
     # Creates a new GUI object and stores appropriate info
     program = GUI_Master.run_main(radar_array, array_old, array_new)  # pulling in the GUI file for use with C2
     # latVal, longVal, altVal = program.waypoint() #attempt to bring lat, long, and alt in from GUI code
-    GUI_Master.C2GUI.print_hello(5, 5)
+    GUI_Master.C2GUI.print_hello(program, 5)
     # Constantly running the code
     global status
     global server_socket
@@ -501,17 +343,17 @@ def main():
     try:
         server_socket.bind(('192.168.1.50', port_num))
     except:
-        print("Unable to connect to 192.168.1.50 - connecting to localhost...")
+        print("Unable to bind as 192.168.1.50 - connecting via localhost...")
         server_socket.bind(('', port_num))
     # server_socket.settimeout(1)
 
     # event and thread activations for Radar Simulator Communication
     stopFlag = Event()
-    syncTimer = TimerThread(stopFlag, program)
+    syncTimer = TimerThread(stopFlag)
     syncTimer.start()
 
     # event and thread activations for receiving messages from the Discovery Drone
-    recvDroneMsg = RecvDroneMsgThread(stopFlag)
+    recvDroneMsg = RecvDroneMsgThread()
     recvDroneMsg.start()
 
     # Event and Thread activations for receiving messages from the Ground Camera
@@ -530,25 +372,29 @@ def main():
         global latitude_deg
         global longitude_deg
         global elevation_m_MSL
-        if (GUI_Master.lat_val != 0):
-            print("Current Latitude Value: ", GUI_Master.lat_val)
-        latitude_deg = float(GUI_Master.lat_val)
-        longitude_deg = float(GUI_Master.long_val)
-        elevation_m_MSL = float(GUI_Master.alt_val)
+        if GUI_Master.disc_long == 0:
+            print("No location from drone!")
+        latitude_deg = float(GUI_Master.disc_lat)
+        longitude_deg = float(GUI_Master.disc_long)
+        elevation_m_MSL = float(GUI_Master.disc_alt)
         RadarFilterPropagation()
         # Update the correct variables in the GUI object
-        ##program.update_log(radar_array, array_old, array_new, drone_new, acoustic_array, acoustic_target_array, true_UAV_pos, radar_array_type48, radar_array_type34)
+        # program.update_log(radar_array, array_old, array_new, drone_new, acoustic_array, acoustic_target_array,
+        #                    true_UAV_pos, radar_array_type48, radar_array_type34)
         program.update_log(podDictionary, TgtEstimatorDict, trueUAVDictionary, radar_Dictionary_type48,
                            radar_Dictionary_type34, discoveryDroneDict, trueUAVDictionary, TgtEstimatorDict,
                            predictedPositions_Dictionary,
                            DiscoveryDroneOffset_dict)  # sending the dictionary infromation found below
         # to the GUI for processing and display
-        # Indicate to the GUI that no messages have been received; not currently supported, but could be implemented later
-        if (status == -1):
+        # Indicate to the GUI that no messages received; not currently supported, but could be implemented later
+        if status == -1:
             program.indicate_no_connection()
 
         # Updating the GUI display after the variables were passed in
-        program.runGUI()
+        try:
+            program.runGUI()
+        except:
+            break
         # # Tkinter method that actually updates the GUI
         program.window.update()
         sleep(0.5)
@@ -563,9 +409,7 @@ def readDiscoverDroneMsg():
     global RadarFollow
     # Image Receive code from discovery Drone
     # try:
-    # receive RPi name and frame from the RPi and acknowledge
-    # the receipt
-    print("//////////////////////////////////////////////////////////YOU DINGUS THIS SHIT IS RUNNING")
+    # receive RPi name and frame from the RPi and acknowledge the receipt
     msgIn, (address, port) = receiver.recvfrom(65536)
     MsgHeadr = int("a59f", 16)  # unique message header
     metaFormat = '<HHddddddddHddddhhh'  # message format determined by specification
@@ -576,7 +420,7 @@ def readDiscoverDroneMsg():
     recvHdr = struct.unpack('<H', temp)[0]  # extracting the message header from the recieved message
     # print(MsgHeadr, recvHdr)
 
-    if (recvHdr == MsgHeadr):
+    if recvHdr == MsgHeadr:
         # get metadata size
         temp = msgIn[2:4]
         metaLen = struct.unpack('<H', temp)[0]  # determining the size of the data
@@ -644,6 +488,7 @@ def readDiscoverDroneMsg():
 # Receiving Imagery and information from the Ground Camera
 def readGndCamMsg():
     global imageCtr
+    global PORTG
     try:
         # receive RPi name and frameG from the RPi and acknowledge
         # the receipt
@@ -1103,17 +948,18 @@ class Radar_Asterix_34_Track:  # initialization class for the Type 34 dictionary
 # Discovery Drone information classes
 # #################################################################################################
 class Discovery_Drone_Information:  # class used to assign metadata from the Discovery Drone for use in the program
+    global disc_lat, disc_long, disc_alt
     grid_true_x = 0
     grid_true_y = 0
 
-    def __init__(self, msg_id, msg_size, timestamp, disc_lat, disc_long, disc_alt, azimuth, elevation, zoom, pixel_Size,
+    def __init__(self, msg_id, msg_size, timestamp, disc_lt, disc_lng, disc_at, azimuth, elevation, zoom, pixel_Size,
                  blob_present, blob_size, blob_location, object_classification, class_certainty, vx, vy, vz, track_id):
         self.msg_id = msg_id
         self.msg_size = msg_size
         self.timestamp = timestamp
-        self.disc_lat = disc_lat
-        self.disc_long = disc_long
-        self.disc_alt = disc_alt
+        self.disc_lat = disc_lt
+        self.disc_long = disc_lng
+        self.disc_alt = disc_at
         self.azimuth = azimuth
         self.elevation = elevation
         self.zoom = zoom
@@ -1191,6 +1037,15 @@ def parse(packet, packet_type):
     # Ensuring we can update the global variables in this function
     global array_new, array_old  # , looped, drone_new  # old variables, not currently supported
     global radar_array, acoustic_array  # old variables, not currently supported
+    DiscoveryDroneOffsetlat = 0
+    DiscoveryDroneOffsetlong = 0
+    DiscoveryDroneOffsetalt = 0
+    global filter_id
+    global filter_exists
+    global target_filter
+    global LattimeOffset
+    global LongtimeOffset
+    global AlttimeOffset
 
     # Pull in Base Location for the Purpose of establishing Ground Zero
     global GroundStationUTMx, GroundStationUTMy, GroundStationUTMz
@@ -1203,7 +1058,7 @@ def parse(packet, packet_type):
                                        packet[8])
         # test dictionary to see if pod exists
         # print(new_acoustic.pod_id)
-        if not new_acoustic.pod_id in podDictionary:
+        if new_acoustic.pod_id not in podDictionary:
             podDictionary[new_acoustic.pod_id] = Acoustic_Pod()  # add pod to dictionary
 
         # fill in current information with only items affected by health message
@@ -1239,12 +1094,12 @@ def parse(packet, packet_type):
         # #file.write(str(podDictionary))
         # #file.close()
 
-    elif packet_type == 'Simulated Acoustic Target Message':  # parsing of Simulated Target Message and population of Dictionary
+    elif packet_type == 'Simulated Acoustic Target Message':  # parsing of Sim Target Message and population of Dict
         new_acoustic = Acoustic_Target(packet[0], packet[1], packet[2], packet[3], packet[4], packet[5], packet[6],
                                        packet[7], packet[8], packet[9])
         # test dictionary to see if pod exists
 
-        if not new_acoustic.pod_id in podDictionary:
+        if new_acoustic.pod_id not in podDictionary:
             podDictionary[new_acoustic.pod_id] = Acoustic_Pod()  # add pod to dictionary
 
         # fill in current information with only items affected by health message
@@ -1286,7 +1141,7 @@ def parse(packet, packet_type):
         new_acoustic_target = Pod_Target_Estimate(packet[0], packet[1], packet[2], packet[3], packet[4], packet[5],
                                                   packet[6], packet[7], packet[8], packet[9], packet[10], packet[11])
 
-        if not new_acoustic_target.track_id in TgtEstimatorDict:
+        if new_acoustic_target.track_id not in TgtEstimatorDict:
             TgtEstimatorDict[new_acoustic_target.track_id] = Pod_Target_Estimate_Track()
         # acoustic_target_array.append(new_acoustic_target)
         TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_lat = packet[3]
@@ -1337,37 +1192,37 @@ def parse(packet, packet_type):
             #  Step 1 Unit conversion to UTM followed by setting reference
             try:
                 global conversion
+                radar_est = (0, 0, 0, 0, 0, 0, 0)
                 conversion = Proj(proj='utm', zone=13, datum='WGS84')
                 AcousticTargetUTMx, AcousticTargetUTMy = conversion(
                     TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_long,
                     TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_lat)
                 # print(AcousticTargetUTMx)
                 # print(AcousticTargetUTMx)
+                AcousticTgtDistx = 0
+                AcousticTgtDisty = 0
+                AcousticTgtAlt = 0
                 if len(TgtEstimatorDict) > 0:
-                    global AcousticTgtDistX, AcousticTgtDisty, AcousticTgtAlt
+                    # global AcousticTgtDistX, AcousticTgtDisty, AcousticTgtAlt  # DEBUG: don't think these are globals
                     # global GroundStationUTMx, GroundStationUTMy, GroundStationUTMz
                     # TgtDistX = float(TargetUTMx) - float(RadarUTMx)
                     # TgtDisty = float(TargetUTMy) - float(RadarUTMy)
-                    AcousticTgtDistX = float(AcousticTargetUTMx) - float(GroundStationUTMx)
+                    AcousticTgtDistx = float(AcousticTargetUTMx) - float(GroundStationUTMx)
                     AcousticTgtDisty = float(AcousticTargetUTMy) - float(GroundStationUTMy)
                     AcousticTgtAlt = float(TgtEstimatorDict[new_acoustic_target.track_id].est_tgt_alt) - float(
                         GroundStationUTMz)
                 current_time_sensor = datetime.datetime.now(tz=pytz.utc).timestamp()
-                acoustic_est = (current_time_sensor, AcousticTgtDistX, AcousticTgtDisty, AcousticTgtAlt, -5, 0, 0)
+                acoustic_est = (current_time_sensor, AcousticTgtDistx, AcousticTgtDisty, AcousticTgtAlt, -5, 0, 0)
 
-                global filter_exists
                 if not filter_exists:  # Sensor Fusion Update for Acoustic Pod Measurement
-                    global filter_id
                     # filter_id = 1 #dictionary index to be altered by sensor fusion
-                    if not filter_id in filtersDictionary:
+                    if filter_id not in filtersDictionary:
                         filtersDictionary[filter_id] = Filters()
 
-                    global target_filter
                     target_filter = Sensor.generate_new_filter_radar(acoustic_est)
                     filter_exists = True
                 else:
                     predicted_state = Sensor.update_with_radar_position_estimate(target_filter, acoustic_est, True)
-                    # radar_est = (current_time_sensor, 0, 0, 0, 0, 0, 0)
                     # pulling out the predicted values
                     predictedX = predicted_state.X[0]
                     predictedY = predicted_state.X[1]
@@ -1385,7 +1240,7 @@ def parse(packet, packet_type):
                     # print(predictedLat)
 
                     # Populate the Dictionary that holds the predicted values
-                    if not filter_id in predictedPositions_Dictionary:
+                    if filter_id not in predictedPositions_Dictionary:
                         predictedPositions_Dictionary[filter_id] = Sensor_estimate()
 
                     predictedPositions_Dictionary[filter_id].xpos = predictedUTMX
@@ -1407,10 +1262,6 @@ def parse(packet, packet_type):
                     # print(filtersDictionary[filter_id].stateMatrix)
 
                     # Time Delay by using a buffer to put Discovery Drone behind Target (Courtesy of C1C Erickson)
-                    global LattimeOffset
-                    global LongtimeOffset
-                    global AlttimeOffset
-
                     if LattimeOffset[0] is not None:
                         DiscoveryDroneOffsetlat = LattimeOffset[0]
                     LattimeOffset[0] = LattimeOffset[1]
@@ -1451,7 +1302,7 @@ def parse(packet, packet_type):
                     #     DiscoveryDroneOffsetalt = predictedUTMZ + 3
                     if (LattimeOffset[0] is not None) & (LongtimeOffset[0] is not None) & (
                             AlttimeOffset[0] is not None):
-                        if not filter_id in DiscoveryDroneOffset_dict:
+                        if filter_id not in DiscoveryDroneOffset_dict:
                             DiscoveryDroneOffset_dict[filter_id] = Discovery_Drone_Offset()
 
                         DiscoveryDroneOffset_dict[filter_id].xpos_offset = predictedUTMX - 10
@@ -1487,7 +1338,7 @@ def parse(packet, packet_type):
             #                             packet[6], packet[7], packet[8])
             new_UAV_position = True_UAV(packet[0], packet[1], packet[2], packet[6 * i + 3], packet[6 * i + 4],
                                         packet[6 * i + 5], packet[6 * i + 6], packet[6 * i + 7], packet[6 * i + 8])
-            if not new_UAV_position.tgt_index in trueUAVDictionary:
+            if new_UAV_position.tgt_index not in trueUAVDictionary:
                 print(new_UAV_position.tgt_index)
                 trueUAVDictionary[new_UAV_position.tgt_index] = True_UAV_Quad()
 
@@ -1529,7 +1380,7 @@ def parse(packet, packet_type):
         new_type_34 = Radar_Asterix_34(radar_data_34[9:12], radar_data_34[12:14], radar_data_34[15:17],
                                        radar_data_34[17:20], radar_data_34[20:23], 1)
 
-        if not new_type_34.track_id in radar_Dictionary_type34:
+        if new_type_34.track_id not in radar_Dictionary_type34:
             radar_Dictionary_type34[
                 new_type_34.track_id] = Radar_Asterix_34_Track()  # add the type 34 message to the dictionary
 
@@ -1657,7 +1508,7 @@ def parse(packet, packet_type):
             #     if not second_new_type_48.num_track in radar_Dictionary_type48:
             #         radar_Dictionary_type48[second_new_type_48.num_track] = Radar_Asterix_48_Track()
             # print(radar_data_48[38:40])
-            if not new_type_48.num_track in radar_Dictionary_type48:
+            if new_type_48.num_track not in radar_Dictionary_type48:
                 radar_Dictionary_type48[new_type_48.num_track] = Radar_Asterix_48_Track()
 
             # if asterix_type = 'End Track Plot': #determined above by Asterix message analysis
@@ -1685,7 +1536,7 @@ def parse(packet, packet_type):
                                                              radar_data_48[151:155], radar_data_48[183:185],
                                                              radar_data_48[185:187], radar_data_48[187:189],
                                                              radar_data_48[189:191], 2)
-                if not new_type_48.num_track in radar_Dictionary_type48:
+                if new_type_48.num_track not in radar_Dictionary_type48:
                     radar_Dictionary_type48[new_type_48.num_track] = Radar_Asterix_48_Track()
 
                 radar_Dictionary_type48[new_type_48.num_track].r_serial = radar_data_48[145:147]
@@ -1713,11 +1564,11 @@ def parse(packet, packet_type):
                         global target_long_correct, target_lat_correct, target_alt_correct
                         target_longitude = struct.unpack(form, radar_Dictionary_type48[
                             rr].radar_long)  # unpacks the bytes into an integer value
-                        target_long_correct = target_longitude[0] / (1e5)
+                        target_long_correct = target_longitude[0] / 1e5
                         # print(long_correct)
                         target_latitude = struct.unpack(form, radar_Dictionary_type48[
                             rr].radar_lat)  # unpacks the bytes into an integer value
-                        target_lat_correct = target_latitude[0] / (1e5)
+                        target_lat_correct = target_latitude[0] / 1e5
                         target_altitude = struct.unpack(form, radar_Dictionary_type48[rr].radar_alt)
                         target_alt_correct = target_altitude[0]
 
@@ -1757,6 +1608,8 @@ def parse(packet, packet_type):
                 TargetUTMx, TargetUTMy = conversion(sensorMeasLong, sensorMeasLat)
                 # print(TargetUTMx)
                 # print(TargetUTMx)
+                current_time_sensor = datetime.datetime.now(tz=pytz.utc).timestamp()
+                radar_est = 0
                 if len(radar_Dictionary_type34) > 0:
                     global TgtDistX, TgtDisty, TgtAlt
                     # TgtDistX = float(TargetUTMx) - float(RadarUTMx)
@@ -1765,17 +1618,15 @@ def parse(packet, packet_type):
                     TgtDisty = float(TargetUTMy) - float(GroundStationUTMy)
                     # TgtAlt = float(target_alt_correct) - float(GroundStationUTMz)
                     TgtAlt = float(sensorMeasAlt) - float(GroundStationUTMz)
-                current_time_sensor = datetime.datetime.now(tz=pytz.utc).timestamp()
-                radar_est = (current_time_sensor, TgtDistX, TgtDisty, TgtAlt, target_xvel_correct, target_yvel_correct,
-                             target_zvel_correct)
+                    current_time_sensor = datetime.datetime.now(tz=pytz.utc).timestamp()
+                    radar_est = (current_time_sensor, TgtDistX, TgtDisty, TgtAlt, target_xvel_correct,
+                                 target_yvel_correct, target_zvel_correct)
+
                 # print(radar_est[0])
 
                 # #################################################################################
                 # # Radar Sensor Fusion # #
-                # global filter_exists
-                # global filter_id
                 if filter_exists is False:
-                    # global target_filter
                     target_filter = Sensor.generate_new_filter_radar(radar_est)
                     filter_exists = True
                 else:
@@ -1798,7 +1649,7 @@ def parse(packet, packet_type):
                     # print(predictedLat)
 
                     # Populate the Dictionary that holds the predicted values
-                    if not filter_id in predictedPositions_Dictionary:
+                    if filter_id not in predictedPositions_Dictionary:
                         predictedPositions_Dictionary[filter_id] = Sensor_estimate()
 
                     predictedPositions_Dictionary[filter_id].xpos = predictedUTMX
@@ -1873,8 +1724,9 @@ def parse(packet, packet_type):
                     #     DiscoveryDroneOffsetlat = predictedLat - (offset/111111) #subtr 10 meter from the predict pos
                     #     DiscoveryDroneOffsetlong = predictedLong + (offset/(111111*np.cos(DiscoveryDroneOffsetlat)))
                     #     DiscoveryDroneOffsetalt = predictedUTMZ + 3
-                    if (LattimeOffset[0] is not None) & LongtimeOffset[0] is not None & (AlttimeOffset[0] is not None):
-                        if not filter_id in DiscoveryDroneOffset_dict:
+                    if (LattimeOffset[0] is not None) & LongtimeOffset[0] is not None and (
+                            AlttimeOffset[0] is not None):
+                        if filter_id not in DiscoveryDroneOffset_dict:
                             DiscoveryDroneOffset_dict[filter_id] = Discovery_Drone_Offset()
 
                         DiscoveryDroneOffset_dict[filter_id].xpos_offset = predictedUTMX - 10
@@ -1909,14 +1761,15 @@ def parse(packet, packet_type):
             # try:
             #     if RadarFollow == True:
             #         #Determine offset
-            #         goToWaypoint(senderD, predictedPositions_Dictionary[filter_id].lat_est, predictedPositions_Dictionary[filter_id].long_est,
+            #         goToWaypoint(senderD, predictedPositions_Dictionary[filter_id].lat_est,
+            #                      predictedPositions_Dictionary[filter_id].long_est,
             #                      predictedPositions_Dictionary[filter_id].alt_est, 5)
             #         print(RadarFollow)
             #
             # except:
             #     print("No Radar For the Discovery Drone to Follow")
 
-            ## Acoustic Pod Fusion Section ##
+            # Acoustic Pod Fusion Section #
 
     # Populating the Discovery Drone Dictionary
     elif packet_type == 'Discovery Drone Information':
@@ -1926,7 +1779,7 @@ def parse(packet, packet_type):
                                                          packet[5], packet[6], packet[7], packet[8], packet[9],
                                                          packet[10], packet[11], packet[12], packet[13], packet[14],
                                                          packet[15], packet[16], packet[17], 1)
-        if not new_DiscDrone_info.track_id in discoveryDroneDict:
+        if new_DiscDrone_info.track_id not in discoveryDroneDict:
             discoveryDroneDict[new_DiscDrone_info.track_id] = Discovery_Drone()
 
         # fills in the information relevant to the Discovery Drone Messages
@@ -1968,10 +1821,9 @@ def start_server():
     # """
     global status
     # receiving messages from the Simulated RADAR system and determining their type based on the message header
+    raw_data = 0  # reset to 0 so you know whether you received something new
     try:
-        raw_data = 0  # reset to 0 so you know whether you received something new
-        raw_data = server_socket.recv(
-            100000)  # capture packet...100000 is the buffer size, or maximum amount of data that can be received
+        raw_data = server_socket.recv(100000)  # capture packet...100000 is the buffer size
         # print("Server Open")
     except:
         print("Did not parse data")
@@ -2069,7 +1921,7 @@ def SetRoi(linkup, lat, long, alt):
 
 def RadarFilterPropagation():  # function to propagate estimate in time even when no Radar Measurement present
     global filter_exists
-    global GroundStationUTMx, GroundStationUTMy, baseAltitude, conversion, new_type_48, filter_id
+    global GroundStationUTMx, GroundStationUTMy, GroundStationUTMz, conversion, new_type_48, filter_id
     try:
         if filter_exists:
             current_time_sensor = datetime.datetime.now(tz=pytz.utc).timestamp()
@@ -2093,7 +1945,7 @@ def RadarFilterPropagation():  # function to propagate estimate in time even whe
             # print(predictedLat)
 
             # Populate the Dictionary that holds the predicted values
-            if not filter_id in predictedPositions_Dictionary:
+            if filter_id not in predictedPositions_Dictionary:
                 predictedPositions_Dictionary[filter_id] = Sensor_estimate()
 
             predictedPositions_Dictionary[filter_id].xpos = predictedUTMX
@@ -2158,7 +2010,7 @@ def RadarFilterPropagation():  # function to propagate estimate in time even whe
                 #     DiscoveryDroneOffsetlong = predictedLong + (offset/(111111*np.cos(DiscoveryDroneOffsetlat)))
                 #     DiscoveryDroneOffsetalt = predictedUTMZ + 3
                 if (LattimeOffset[0] is not None) & (LongtimeOffset[0] is not None) & (AlttimeOffset[0] is not None):
-                    if not filter_id in DiscoveryDroneOffset_dict:
+                    if filter_id not in DiscoveryDroneOffset_dict:
                         DiscoveryDroneOffset_dict[filter_id] = Discovery_Drone_Offset()
 
                     DiscoveryDroneOffset_dict[filter_id].xpos_offset = predictedUTMX - 10
@@ -2193,15 +2045,15 @@ def BaseLocation():
     baseAltitude = 2153.00  # Home Base Altitude
 
     # unit conversion to UTM
-    conversion = Proj(proj='utm', zone=13, datum='WGS84')
-    GroundStationUTMx, GroundStationUTMy = conversion(baseLongitude, baseLatitude)
-    return GroundStationUTMx, GroundStationUTMy, baseAltitude
+    conversion1 = Proj(proj='utm', zone=13, datum='WGS84')
+    GroundStationUTMx1, GroundStationUTMy1 = conversion(baseLongitude, baseLatitude)
+    return GroundStationUTMx1, GroundStationUTMy1, baseAltitude
 
 
 def sendSensorFusionWaypoint(filter_number):
     global RadarFollow, target_lat_correct, target_long_correct, target_alt_correct, followMeSelection, True_UAV_Index
     # try:
-    if RadarFollow == True:
+    if RadarFollow:
         # Determine offset
         if GUI_Master.followme_select == 2:  # follow me selection for using radar
             goToWaypoint(senderD, target_lat_correct - (10 / 111111), target_long_correct,
