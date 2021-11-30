@@ -9,7 +9,7 @@
 
 Clone via: `git clone https://github.com/lukeegorham/C_UAS.git`
 
-See [master_documentation](Documentation/Master_Documentation.md) for more detailed system information, and also the [webpage](https://github.com/lukeegorham/C_UAS.git).
+See [Master_Documentation](Documentation/Master_Documentation.md) for more detailed system information, and also the [webpage](https://github.com/lukeegorham/C_UAS.git).
 
 ## Directory Index
 - [C_UAS/AcousticPodRadarSim/](AcousticPodRadarSim)

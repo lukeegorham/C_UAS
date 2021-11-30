@@ -22,6 +22,10 @@ Ports:
     65536 - [45454] [5666] [TCP] Send commands to Discovery Drone
     XXXXX - [TCP] Receive target information from GS2
     XXXXX - [TCP] Receive acoustic messages from Acoustic Hub
+    
+SSH Login:
+    Username:   cUAS_Laptop1
+    Password:   dfec
 ```
 
 #### Groundstation Laptop 2: *(Dell ToughBook running Windows 10)*
@@ -29,6 +33,10 @@ Ports:
 IP Address: 192.168.1.51/24     (set DNS & Gateway to 192.168.1.1)
 Ports:
     56555 - List
+        
+SSH Login:
+    Username:   cUAS_Laptop2
+    Password:   dfec
 ```
 
 #### Camera Controller: *(Raspberry PI running Raspian)*
@@ -38,6 +46,10 @@ Ports:
     46555 - [TCP] Listen for commands from GS1
     46554 - [UDP] Send video feed to GS1
      5566 - [TCP] Send messages to GS1
+        
+SSH Login:
+    Username:   pi
+    Password:   dfec
 ```
 
 #### Acoustics Hub: *(Raspberry PI running Raspian)*
@@ -47,6 +59,10 @@ Ports:
     XXXXX - [TCP] Sends target location to GS2
                 Messages sent every XXX seconds for targets
                 System health messages sent every XXX seconds
+        
+SSH Login:
+    Username:   pi
+    Password:   dfec
 ```
 
 #### Radar Unit: *(L-Star)*
@@ -65,7 +81,7 @@ RF Data: *MASTER*
      Power - 30dBm
      Auth - AES128  Password: capstone
 
-Login:
+Login (use browser to access IP address):
      Username: admin
      Password: capstone
 ```
@@ -79,7 +95,7 @@ RF Data: *SLAVE*
      Power - 30dBm
      Auth - AES128  Password: capstone
 
-Login:
+Login (use browser to access IP address):
      Username: admin
      Password: capstone
 ```
@@ -90,6 +106,10 @@ IP Address: 192.168.1.25/24
 Ports:
    44555 - [UDP] send status/pos/video to GS1
     5666 - [TCP] receive messages from GS1
+        
+SSH Login:
+    Username:   usafa
+    Password:   usafa
 ```
 
 ## Sending Messages to Discovery Drone:

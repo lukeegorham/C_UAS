@@ -1,9 +1,9 @@
 # Acoustic Simulator
 
 ### Description:
-This program is a part of the GFE package for our capstone. It was writen by Dr. Gruber for the 2020-2021 team and simulates the messages sent by the radar unit so that we can practice reading these messages with our own program. Currently, this program is configured to run on the GroundStation 2 Laptop and sends messages to the GroundStation 1 Laptop to be displayed on the GUI.
+This program is a part of the GFE package for our capstone. It was writen by Dr. Gruber for the 2020-2021 team and simulates the messages sent by the radar unit so that we can practice reading these messages with our own program. Currently, this program is configured to run on the Ground Station 2 Laptop and sends messages to the Ground Station 1 Laptop to be displayed on the GUI.
 
-It is critical to note that the simulator forwards the packets from the acoustic hub to the GroundStation 1 Laptop.
+It is critical to note that the simulator forwards the packets from the acoustic hub to the Ground Station 1 Laptop.
 
 ## Instructions for Using with Sensor Data 
 To run the program:

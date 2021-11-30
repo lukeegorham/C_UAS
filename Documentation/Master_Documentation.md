@@ -5,17 +5,18 @@ We recommend that you begin with an [overview](ProjSubsystemInfo.md) of the proj
 
 ## Documentation Links:
 * [Overview](ProjSubsystemInfo.md) - a good place to start, includes scope of the project
-* [Install](InstallSoftware.md) - get your hardware up and running with our software, and how to best debug
-* [Power System](PowerSystem.md) - understand hardware for field setup and how to power in the lab
-* [Network](Network.md) - organized by subsystem, includes IP addresses and Ports for each connection
-* [Field Operations](FieldOpsInstructions.md) - now that you're ready for a test, here's how
+* [Install](InstallSoftware.md) - how to get hardware up and running with software, how to best debug
+* [Power System](PowerSystem.md) - understand hardware setup in the field and in the lab
+* [Network](Network.md) - subsystem IP addresses and Ports for each connection
+* [Field Operations](FieldOpsInstructions.md) - how to set up for a field test
 * [Image Processing](ImageProcessing.md) - process for detecting presence and position of an incoming drone
-* [Sensor Fusion](SensorFusion.md) - process for estimating future positions based upon current position and velocity
-* [Issue Tracker](IssueTracker.md) - running list of current known issues per system
+* [Sensor Fusion](SensorFusion.md) - process for determining and predicting positions based on sensor data
+* [Issue Tracker](IssueTracker.md) - running list of current known issues for each system
+
 ## Subsystems:
 * [Acoustic/Radar Simulator](../AcousticPodRadarSim/SIM_README.md)
 * [Acoustic Hub/Pods](../AcousticPodRadarSim/POD_README.md)
-* [C2](../GroundStation/C2_README.md)
+* [C2](../GroundStation/Readme_C2.md)
 * [Discovery Drone]()
 * [Ground Camera]()
 * [GUI]()

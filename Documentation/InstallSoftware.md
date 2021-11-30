@@ -1,18 +1,18 @@
 # Installing Software
 
 ### Description:
-This file includes initial software installation instructions for GroundStation1 laptop, GroundStation2 laptop, ground camera Raspberry PI, drone Raspberry PI, and the acoustic hub Raspberry PI units. 
+This file includes initial software installation instructions for Ground Station 1 laptop, Ground Station 2 laptop, ground camera Raspberry PI, drone Raspberry PI, and the acoustic hub Raspberry PI units. 
 
-## Groundstation Laptop 1:
+## Ground Station Laptop 1:
 ### Necessary Files:
-- ALL PNG FILES
 - C2MasterFile.py
 - GUI_Master.py
 - LLtoUTM.py
+- ALL PNG FILES (in GroundStation Directory)
 
 ### Instructions To Install and Launch C2/GUI System:
 1) **OPTIONAL** - Download and install PyCharm 
-2) Download and install Python 3.7.9 (google it)
+2) Download and install [Python 3.7.9]()
 3) Set up PyCharm to use Python3.7.9 environment
 4) IF ON LINUX:
    1) [Download](../GroundStation/Install/Install_Libraries.sh) `Install_Libraries.sh`
@@ -34,7 +34,7 @@ This file includes initial software installation instructions for GroundStation1
       5) `Pref DNS: 192.168.1.1`
    4) Click Save
 8) **LINUX:**
-    ) s
+    1) Configure ethernet settings as seen in step 7 
 9) Firewall Settings (*can entirely disable if desired - no internet connectivity required*)
    1) Allow These Ports (both IN and OUT, both TCP and UDP):
       1) `XXXX [UDP]` - get discovery drone video feed
@@ -46,7 +46,7 @@ This file includes initial software installation instructions for GroundStation1
     1) Can be run from either pycharm or through CLI python3
 11) Click checkbox on GUI to allow Acoustic Messages to get positions to diplay on the screen
 
-## Groundstation Laptop 2:
+## Ground Station Laptop 2:
 ### Necessary Files:
 Copy all of `AcousticPodRadarSim` to laptop. Note that there is a version for simulating output of Acousic Pods and Radar and another which takes "true" values in the field and sends to GS1 to display on the GUI. Run the proper version depending on if you are in the lab or in the field.
 
