@@ -70,7 +70,7 @@ This file includes prerequisites and procedures for real-world execution of our 
       1) `IP Addr:  192.168.1.31`
       2) `Username: pi`
       3) `password: dfec`
-      4) `python3 ____________________ -______`
+      4) `./run`
 2) Initialize Ground Camera System
    1) SSH into Camera Controller from GroundStation 1 Laptop using PuTTY
       1) `IP Addr:  192.168.1.26`
@@ -82,15 +82,14 @@ This file includes prerequisites and procedures for real-world execution of our 
         1) `IP Addr: 192.168.1.25`
         2) `Username: pi`
         3) `Password: dfec`
-        4) `cd WorkingImages/`
-        5) `python3 Drone_Master.py`
+        4) `./run`
 4) Launch Acoustic/Radar Simulator
    1) Run on GS2 computer
    2) Shortcut is on desktop
-   3) Ensure this is not the Simulator version
+   3) Ensure proper version for location and whether or not to use acoustic data
 5) Launch C2/GUI System
    1) Run on GS1 computer
    2) Shortcut is on desktop
-6) Click to enable acoustic data in GUI and Acoustic/Radar Simulator
+6) Click checkboxes as desired to enable displaying data on GUI
 
 -- Back to [master_documentation](../Documentation/Master_Documentation.md) --
