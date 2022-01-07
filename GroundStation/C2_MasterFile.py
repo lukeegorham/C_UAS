@@ -58,6 +58,7 @@ global TgtDisty
 global TgtAlt
 global radar_data_48, radar_data_34
 global target_filter
+global conversion
 
 LattimeOffset = [None, None, None]
 LongtimeOffset = [None, None, None]
@@ -2045,7 +2046,7 @@ def BaseLocation():
     baseAltitude = 2153.00  # Home Base Altitude
 
     # unit conversion to UTM
-    conversion1 = Proj(proj='utm', zone=13, datum='WGS84')
+    conversion = Proj(proj='utm', zone=13, datum='WGS84')
     GroundStationUTMx1, GroundStationUTMy1 = conversion(baseLongitude, baseLatitude)
     return GroundStationUTMx1, GroundStationUTMy1, baseAltitude
 
