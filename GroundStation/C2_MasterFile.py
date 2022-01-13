@@ -396,6 +396,11 @@ def main():
             program.runGUI()
         except:
             break
+        #lat_way = GUI_Master.lat_waypoint
+        #long_way = GUI_Master.long_waypoint
+        #alt_way = GUI_Master.alt_waypoint
+        #goToWaypoint(senderD, lat_way, long_way,
+        #             alt_way, 5)
         # # Tkinter method that actually updates the GUI
         program.window.update()
         sleep(0.5)
@@ -1662,6 +1667,7 @@ def parse(packet, packet_type):
                     predictedPositions_Dictionary[filter_id].sensorTime = current_time_sensor
                     # print(predictedRadarPositions_Dictionary[new_type_48.num_track].long_est)
                     # print(TgtAlt)
+                    print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
                     sendSensorFusionWaypoint(filter_id)
 
                     # Populate the filter information for future use
@@ -1900,14 +1906,20 @@ def goToWaypoint(linkup, lat, long, alt, speed):
     msgLen = 26  # based on message specification
     msgFormat = '<HHdlllh'  # based on message specification
     # construction of the fields of a go to waypoint message, based on specification
-    message = [msgHdr, np.uint16(msgLen), datetime.datetime.now(tz=pytz.utc).timestamp(), np.int32(lat * 1e7),
-               np.int32(long * 1e7), np.int32(alt * 1e3)]
+
+    temp1 = lat * 10000000
+    temp2 = long * 10000000
+    temp3 = alt * 1000
+
+    message = [msgHdr, np.uint16(msgLen), datetime.datetime.now(tz=pytz.utc).timestamp(), np.int32(temp1),
+               np.int32(temp2), np.int16(temp3)]
     if speed >= 0:
         sp = speed * 100
     else:
         sp = -1
     message.append(np.int16(sp))
     linkup.sendto(struct.pack(msgFormat, *message), (hostD, portD))  # passing waypoint message to port
+    #print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
 
 
 def SetRoi(linkup, lat, long, alt):
@@ -2055,6 +2067,7 @@ def sendSensorFusionWaypoint(filter_number):
     global RadarFollow, target_lat_correct, target_long_correct, target_alt_correct, followMeSelection, True_UAV_Index
     # try:
     if RadarFollow:
+        print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
         # Determine offset
         if GUI_Master.followme_select == 2:  # follow me selection for using radar
             goToWaypoint(senderD, target_lat_correct - (10 / 111111), target_long_correct,
