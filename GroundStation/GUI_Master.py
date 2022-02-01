@@ -29,6 +29,7 @@ status_a = 0
 rtb_flag = 0
 follow_me_flag = 0
 cam_flag = 0
+userWaypointFlag = 0
 cam_count = 0
 cam_cont = "auto"
 disc_lat = 11
@@ -975,13 +976,16 @@ class C2GUI:
             global lat_waypoint
             global long_waypoint
             global alt_waypoint
-            lat_waypoint = lat_input.get()
-            long_waypoint = long_input.get()
-            alt_waypoint = alt_input.get()
+            global userWaypointFlag
+            lat_waypoint = float(lat_input.get())
+            long_waypoint = float(long_input.get())
+            alt_waypoint = float(alt_input.get())
             print(lat_waypoint, long_waypoint, alt_waypoint)  # DEBUG
+            print(type(lat_waypoint))
+            userWaypointFlag = 1
 
         # Button for saving data
-        save_button = tk.Button(self.newWindow, text="Save waypoint", command=save_waypoint)
+        save_button = tk.Button(self.newWindow, text="Navigate to Waypoint", command=save_waypoint)
         save_button.pack()
 
     def rtb_control(self):

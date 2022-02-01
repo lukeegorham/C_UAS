@@ -59,6 +59,9 @@ global TgtAlt
 global radar_data_48, radar_data_34
 global target_filter
 global conversion
+last_lat_waypoint = 0
+last_long_waypoint = 0
+last_alt_waypoint = 0
 
 LattimeOffset = [None, None, None]
 LongtimeOffset = [None, None, None]
@@ -379,6 +382,8 @@ def main():
         longitude_deg = float(GUI_Master.disc_long)
         elevation_m_MSL = float(GUI_Master.disc_alt)
         RadarFilterPropagation()
+        if GUI_Master.userWaypointFlag == 1:
+            sendUserDefinedWaypoint()
         # Update the correct variables in the GUI object
         # program.update_log(radar_array, array_old, array_new, drone_new, acoustic_array, acoustic_target_array,
         #                    true_UAV_pos, radar_array_type48, radar_array_type34)
@@ -476,10 +481,10 @@ def readDiscoverDroneMsg():
             print(RadarFollow)
             GUI_Master.follow_me_flag = 0
         # using the open CV message to send waypoint 1 message to discovery drone by pressing '1'
-        if(cv2.waitKey(1) & 0xFF == ord('1')):
-            cv2.destroyAllWindows()
-            goToWaypoint(senderD, latitude_deg, longitude_deg, elevation_m_MSL, 5)
-            print('JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ')
+        #if(cv2.waitKey(1) & 0xFF == ord('1')):
+        #    cv2.destroyAllWindows()
+        #    goToWaypoint(senderD, latitude_deg, longitude_deg, elevation_m_MSL, 5)
+        #    print('JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ')
         # using the open CV message to send waypoint 2 message to discovery drone by pressing '2'
         # if(cv2.waitKey(1) & 0xFF == ord('2')):
         #    cv2.destroyAllWindows()
@@ -1905,7 +1910,7 @@ def returnToLaunch(linkup):  # Return to home Discovery Drone functon
 
 
 def goToWaypoint(linkup, lat, long, alt, speed):
-    #print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
+    print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
     msgHdr = int("abf2", 16)  # based on message specification
     msgLen = 26  # based on message specification
     msgFormat = '<HHdlllh'  # based on message specification
@@ -2095,6 +2100,16 @@ def sendSensorFusionWaypoint(filter_number):
 
     # except:
     # print("No Radar For the Discovery Drone to Follow")
+
+def sendUserDefinedWaypoint():
+    global last_lat_waypoint
+    global last_long_waypoint
+    global last_alt_waypoint
+    last_lat_waypoint = GUI_Master.lat_waypoint
+    last_long_waypoint = GUI_Master.long_waypoint
+    last_alt_waypoint = GUI_Master.alt_waypoint
+    goToWaypoint(senderD, last_lat_waypoint, last_long_waypoint, last_alt_waypoint, 5)
+    GUI_Master.userWaypointFlag = 0
 
 
 if __name__ == '__main__':
