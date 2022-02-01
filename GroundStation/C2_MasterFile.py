@@ -396,6 +396,11 @@ def main():
             program.runGUI()
         except:
             break
+        #lat_way = GUI_Master.lat_waypoint           ## these lines were used to test connection from ground station to
+        #long_way = GUI_Master.long_waypoint         ## the discovery drone. do not run this in field tests, etc.
+        #alt_way = GUI_Master.alt_waypoint           ## -Max Patterson
+        #goToWaypoint(senderD, lat_way, long_way,
+        #             alt_way, 5)
         # # Tkinter method that actually updates the GUI
         program.window.update()
         sleep(0.5)
@@ -1334,6 +1339,7 @@ def parse(packet, packet_type):
         # sendSensorFusionWaypoint()
 
     elif packet_type == 'True UAV Position':
+        global True_UAV_Index
         for i in range(packet[2]):
             # new_UAV_position = True_UAV(packet[0], packet[1], packet[2], packet[3], packet[4], packet[5],
             #                             packet[6], packet[7], packet[8])
@@ -1376,6 +1382,7 @@ def parse(packet, packet_type):
                                  'LATITUDE': trueUAVDictionary[new_UAV_position.tgt_index].UAV_lat,
                                  'LONGITUDE': trueUAVDictionary[new_UAV_position.tgt_index].UAV_long})
         # for i in range (len(trueUAVDictionary)):
+        True_UAV_Index = new_UAV_position.tgt_index
 
     elif packet_type == 'Radar Type 34':  # parsing of ASTERIX 34 message and population of Dict with select information
         new_type_34 = Radar_Asterix_34(radar_data_34[9:12], radar_data_34[12:14], radar_data_34[15:17],
@@ -1662,6 +1669,7 @@ def parse(packet, packet_type):
                     predictedPositions_Dictionary[filter_id].sensorTime = current_time_sensor
                     # print(predictedRadarPositions_Dictionary[new_type_48.num_track].long_est)
                     # print(TgtAlt)
+                    print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
                     sendSensorFusionWaypoint(filter_id)
 
                     # Populate the filter information for future use
@@ -1900,14 +1908,20 @@ def goToWaypoint(linkup, lat, long, alt, speed):
     msgLen = 26  # based on message specification
     msgFormat = '<HHdlllh'  # based on message specification
     # construction of the fields of a go to waypoint message, based on specification
-    message = [msgHdr, np.uint16(msgLen), datetime.datetime.now(tz=pytz.utc).timestamp(), np.int32(lat * 1e7),
-               np.int32(long * 1e7), np.int32(alt * 1e3)]
+
+    temp1 = lat * 10000000
+    temp2 = long * 10000000
+    temp3 = alt * 1000
+
+    message = [msgHdr, np.uint16(msgLen), datetime.datetime.now(tz=pytz.utc).timestamp(), np.int32(temp1),
+               np.int32(temp2), np.int16(temp3)]
     if speed >= 0:
         sp = speed * 100
     else:
         sp = -1
     message.append(np.int16(sp))
     linkup.sendto(struct.pack(msgFormat, *message), (hostD, portD))  # passing waypoint message to port
+    #print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
 
 
 def SetRoi(linkup, lat, long, alt):
@@ -2063,9 +2077,10 @@ def sendSensorFusionWaypoint(filter_number):
             SetRoi(senderD, target_lat_correct, target_long_correct, target_alt_correct)
 
         if GUI_Master.followme_select == 1:  # follow me mode selection for True UAV
+            print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
             goToWaypoint(senderD, trueUAVDictionary[True_UAV_Index].UAV_lat - (10 / 111111),
-                         trueUAVDictionary[True_UAV_Index].UAV_lat,
-                         trueUAVDictionary[True_UAV_Index].UAV_lat, 5)
+                         trueUAVDictionary[True_UAV_Index].UAV_long,
+                         trueUAVDictionary[True_UAV_Index].UAV_alt, 5)
 
             print("Following Target Based on True UAV")
         if GUI_Master.followme_select == 3:  # follow me mode using Sensor Fusion Estimate
