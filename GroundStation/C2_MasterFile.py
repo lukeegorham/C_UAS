@@ -223,7 +223,7 @@ global longitude_degC
 global elevation_m_MSLC
 
 # Creation of the port for sending messages from C2 to the Ground Camera
-hostC = '192.168.1.25'
+hostC = '192.168.1.22'
 portC = 46555  # System defined port to handle communications from C2 to Ground Camera
 # senderC = imagezmq.ImageSender(connect_to='tcp://192.168.1.75:5555')
 # create dgram udp socket
@@ -252,7 +252,7 @@ MsgHeadrC = int("1e91",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
 # Creation of the port to send messages to the Discovery Drone from C2
-hostD = '192.168.1.25'
+hostD = '192.168.1.26'
 portD = 45454  # defined in the Message Structure between C2 and Discovery Drone file
 latitude_deg = 0
 # latitude_deg=39.008942
@@ -312,7 +312,7 @@ MsgHeadrD = int("a33e",
                 16)  # randomly chosen for experiment, system defined message header for Ground Camera Control messages
 
 # Creation of the port to send messages to the Discovery Drone from C2
-hostDctrl = '192.168.1.25'
+hostDctrl = '192.168.1.26'
 portDctrl = 5666  # defined in the Message Structure between C2 and Discovery Drone file
 
 global server_socket
@@ -396,10 +396,10 @@ def main():
             program.runGUI()
         except:
             break
-        #lat_way = GUI_Master.lat_waypoint           ## these lines were used to test connection from ground station to
-        #long_way = GUI_Master.long_waypoint         ## the discovery drone. do not run this in field tests, etc.
-        #alt_way = GUI_Master.alt_waypoint           ## -Max Patterson
-        #goToWaypoint(senderD, lat_way, long_way,
+        # lat_way = 39.00890          ## these lines were used to test connection from ground station to
+        # long_way = 104.88205         ## the discovery drone. do not run this in field tests, etc.
+        # alt_way = 2150           ## -Max Patterson
+        # goToWaypoint(senderD, lat_way, long_way,
         #             alt_way, 5)
         # # Tkinter method that actually updates the GUI
         program.window.update()
@@ -476,9 +476,10 @@ def readDiscoverDroneMsg():
             print(RadarFollow)
             GUI_Master.follow_me_flag = 0
         # using the open CV message to send waypoint 1 message to discovery drone by pressing '1'
-        # if(cv2.waitKey(1) & 0xFF == ord('1')):
-        #    cv2.destroyAllWindows()
-        #    goToWaypoint(senderD, latitude_deg, longitude_deg, elevation_m_MSL, 5)
+        if(cv2.waitKey(1) & 0xFF == ord('1')):
+            cv2.destroyAllWindows()
+            goToWaypoint(senderD, latitude_deg, longitude_deg, elevation_m_MSL, 5)
+            print('JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ')
         # using the open CV message to send waypoint 2 message to discovery drone by pressing '2'
         # if(cv2.waitKey(1) & 0xFF == ord('2')):
         #    cv2.destroyAllWindows()
@@ -1669,7 +1670,7 @@ def parse(packet, packet_type):
                     predictedPositions_Dictionary[filter_id].sensorTime = current_time_sensor
                     # print(predictedRadarPositions_Dictionary[new_type_48.num_track].long_est)
                     # print(TgtAlt)
-                    print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
+                    #print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
                     sendSensorFusionWaypoint(filter_id)
 
                     # Populate the filter information for future use
@@ -1904,6 +1905,7 @@ def returnToLaunch(linkup):  # Return to home Discovery Drone functon
 
 
 def goToWaypoint(linkup, lat, long, alt, speed):
+    #print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
     msgHdr = int("abf2", 16)  # based on message specification
     msgLen = 26  # based on message specification
     msgFormat = '<HHdlllh'  # based on message specification
@@ -1921,7 +1923,7 @@ def goToWaypoint(linkup, lat, long, alt, speed):
         sp = -1
     message.append(np.int16(sp))
     linkup.sendto(struct.pack(msgFormat, *message), (hostD, portD))  # passing waypoint message to port
-    #print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
+    print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
 
 
 def SetRoi(linkup, lat, long, alt):

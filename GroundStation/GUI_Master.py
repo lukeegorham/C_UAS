@@ -34,6 +34,9 @@ cam_cont = "auto"
 disc_lat = 11
 disc_long = 22
 disc_alt = 33
+discovery_lat = 44
+discovery_long = 55
+discovery_alt = 66
 #gnd_direction = 0
 gnd_direction = ["North", "East", "South", "West"]
 map_options = ["Stillman", "Athletic Fields", "Krusty Krab", "Close"]
@@ -395,9 +398,12 @@ class C2GUI:
         self.draw_radar_34()
         self.draw_DiscoveryDrone_Pos()
         self.status_view()
-        self.cur_pos_lat = Label(text=f"Current Latitude: {round(disc_lat, 6)}")
-        self.cur_pos_long = Label(text=f"Current Longitude: {round(disc_long, 6)}")
-        self.cur_pos_alt = Label(text=f"Current Altitude: {disc_alt}")
+        self.cur_pos_lat = Label(text=f"Enemy Latitude: {round(disc_lat, 6)}")
+        self.cur_pos_long = Label(text=f"Enemy Longitude: {round(disc_long, 6)}")
+        self.cur_pos_alt = Label(text=f"Enemy Altitude: {disc_alt}")
+        self.cur_discovery_lat = Label(text=f"DDrone Latitude: {round(discovery_lat, 6)}")
+        self.cur_discovery_long = Label(text=f"DDrone Longitude: {round(discovery_long, 6)}")
+        self.cur_discovery_alt = Label(text=f"DDrone Altitude: {discovery_alt}")
         self.cam_stat = Label(text=f"{cam_cont}")
         self.follow_stat = Label(text=f"{follow_cont}")
         self.rtb_stat = Label(text=f"{rtb_cont}")
@@ -411,6 +417,9 @@ class C2GUI:
         self.cur_pos_lat.place(x=400, y=670)
         self.cur_pos_long.place(x=570, y=670)
         self.cur_pos_alt.place(x=760, y=670)
+        self.cur_discovery_lat.place(x=400, y=710)
+        self.cur_discovery_long.place(x=570, y=710)
+        self.cur_discovery_alt.place(x=760, y=710)
         self.cam_stat.place(x=1475, y=168)
         self.follow_stat.place(x=1475, y=128)
         self.rtb_stat.place(x=1475, y=88)
@@ -834,9 +843,13 @@ class C2GUI:
             self.a_breadcrumb[aa].update_grid(temp_target_x, temp_target_y)
 
     def update_DiscoveryDrone(self):
+        global discovery_lat, discovery_long, discovery_alt
         for ii in self.DiscoveryDrone:
             discovery_correct_long = self.DiscoveryDrone[ii].disc_long / 1e7
             discovery_correct_lat = self.DiscoveryDrone[ii].disc_lat / 1e7
+            discovery_lat = self.DiscoveryDrone[ii].disc_lat / 1e7
+            discovery_long = self.DiscoveryDrone[ii].disc_long / 1e7
+            discovery_alt = self.DiscoveryDrone[ii].disc_alt / 1e3
             print('Discovery Long=', discovery_correct_long)
             print('Discovery Lat =', discovery_correct_lat)
             temp_UAV_x, temp_UAV_y = normalize_locs(discovery_correct_long, discovery_correct_lat, self.img_width,
