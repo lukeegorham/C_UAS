@@ -63,8 +63,8 @@ def readMavlinkAndForwardUdp(linkdown):
             msg = mavConnection.recv_match(type=['SYSTEM_TIME','GLOBAL_POSITION_INT','HEARTBEAT'],blocking=True)
             if not msg:
                 continue
-            
-            # print(msg.get_type())  # DEBUG: print type of message received
+
+#            print("Message Received")
             
             if msg.get_type() == 'SYSTEM_TIME':
                 baseTime = msg.time_unix_usec / 1e6 - msg.time_boot_ms / 1e3
@@ -106,8 +106,8 @@ def readMavlinkAndForwardUdp(linkdown):
                     if normalControl:
                         print('Entered safe RTL mode or land')
                         normalControl=False
-#            if msg.get_type() == 'COMMAND_ACK':
-#                print('msg.command:'+str(msg.command)+', msg.result: '+str(msg.result))
+            if msg.get_type() == 'COMMAND_ACK':
+                print('msg.command:'+str(msg.command)+', msg.result: '+str(msg.result))
                 
         except (KeyboardInterrupt):
             raise
@@ -144,7 +144,7 @@ def readUdpAndSendMavlinkCommand(uplink):
                 msgFormat='<2H'
                 data=struct.unpack(msgFormat,msgIn)
                 if(data[1]==msg_confirm):   #verify command with second short
-                    print("Return to Home", msgId)
+                    print("Return to Home")
                     RTL()
 
             # set ROI command
@@ -169,8 +169,7 @@ def readUdpAndSendMavlinkCommand(uplink):
                 msgFormat='<HHddd'
                 data=struct.unpack(msgFormat,msgIn)
                 SendTilt(data[3],data[4])
-                
-            print("message ID:", msgId)
+
                 
         except (KeyboardInterrupt):
             raise
@@ -351,7 +350,7 @@ def InitMavlink(verbose):
     if verbose:
         print("Making mavLink connection")
     global mavConnection   
-    s.close()  # needed to work on Windows python tests
+    # s.close()  # needed to work on Windows python tests
     mavConnection=mavutil.mavlink_connection(s.port,baud=115200)
 
     if verbose:

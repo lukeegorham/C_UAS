@@ -66,7 +66,7 @@ class CtrlC2(Thread):
 host='192.168.1.50'
 port=44555
 
-hostr='192.168.1.25';
+hostr='192.168.1.26';
 portr=5666;
 
 
@@ -107,7 +107,8 @@ class VideoCapture:
     return self.q.get()
 
 jpeg_quality = 70  # 0 to 100, higher is better quality, 95 is cv2 default
-cap = VideoCapture(4)
+cap = VideoCapture(2)
+print("Opening Camera Interface : 2")
 noNewFile=True
 msgFormat='<HHddddddddHddddhhh'
 MsgHeadr=int("a59f",16) # randomly chosen for experiment
@@ -125,7 +126,7 @@ try:
     receiver.bind((hostr,portr))
 except socket.error:
     print("no bind")
-    sys.exit()
+    sys.exit() #HAD TO REMOVE TO GET VIDEO FEED TO SEND - ISSUES LATER?
 
 
 def main():
@@ -242,14 +243,12 @@ def Ctrl():
     global imageProc
     global imageSave
     msgIn, (address,port) = receiver.recvfrom(65536)
-    # msgIn, (address,port) = receiver.recv()
     MsgHeadrR=int("a33e",16) #unique message header
     msgFormatR='<HHdHHHHddd'
         # verify correct message
     temp=msgIn[0:2]
     recvHdr=struct.unpack('<H', temp)[0]
 
-    # Unpack and send camera tilt from message
     if(recvHdr==MsgHeadrR):
             # get metadata size
         temp=msgIn[2:4]
@@ -267,12 +266,8 @@ def Ctrl():
         if(msgdata[4] == 4):
             SendTilt( 90, 270)
 
-    # Unpack and store boolean values
     imageProc = msgdata[5]
     imageSave = msgdata[6]
-    
-    # Unpack and send waypoint to PixHawk
-    
 
 
 
