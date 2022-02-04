@@ -14,3 +14,5 @@ AcousticPodRadarSim/.vs/AcousticPodSimRadarAsterix/v16/.suo
 /Tests/.idea/
 /AcousticPodRadarSim/.vs/
 /GroundStation/.idea/
+*.jpg
+*.png
