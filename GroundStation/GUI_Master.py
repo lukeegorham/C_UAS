@@ -253,6 +253,7 @@ class C2GUI:
         self.Y2 = Radiobutton(text="90 deg", variable=yaw, value=6, command=self.yaw2)
         self.Y3 = Radiobutton(text="180 deg", variable=yaw, value=7, command=self.yaw3)
         self.Y4 = Radiobutton(text="270 deg", variable=yaw, value=8, command=self.yaw4)
+        self.Y5 = Radiobutton(text="Drone View (Don't work yet)", variable=yaw, value=12, command=self.yaw5)
 
         self.fusion_acoustic = tk.Button(text="Acoustic Sensor Fusion", command=self.acoustic_msg)
         self.ground_processing = tk.Checkbutton(text="Ground Camera Image Processing", command=self.image_ground)
@@ -347,10 +348,11 @@ class C2GUI:
         #self.R2.place(x=1365, y=446)
         #self.R3.place(x=1365, y=486)
         #self.R4.place(x=1365, y=526)
-        self.Y1.place(x=1365, y=606)
-        self.Y2.place(x=1365, y=646)
-        self.Y3.place(x=1365, y=686)
-        self.Y4.place(x=1365, y=726)
+        self.Y1.place(x=1365, y=596)
+        self.Y2.place(x=1365, y=626)
+        self.Y3.place(x=1365, y=656)
+        self.Y4.place(x=1365, y=686)
+        self.Y5.place(x=1365, y=716)
         self.speed.place(x=170, y=760)
         self.speed_title.place(x=170, y=730)
         self.speed_button.place(x=300, y=755)
@@ -402,8 +404,8 @@ class C2GUI:
         self.cur_pos_lat = Label(text=f"Enemy Latitude: {round(disc_lat, 6)}")
         self.cur_pos_long = Label(text=f"Enemy Longitude: {round(disc_long, 6)}")
         self.cur_pos_alt = Label(text=f"Enemy Altitude: {disc_alt}")
-        self.cur_discovery_lat = Label(text=f"DDrone Latitude: {round(discovery_lat, 6)}")
-        self.cur_discovery_long = Label(text=f"DDrone Longitude: {round(discovery_long, 6)}")
+        self.cur_discovery_lat = Label(text=f"DDrone Latitude: {round(discovery_lat, 10)}")
+        self.cur_discovery_long = Label(text=f"DDrone Longitude: {round(discovery_long, 10)}")
         self.cur_discovery_alt = Label(text=f"DDrone Altitude: {discovery_alt}")
         self.cam_stat = Label(text=f"{cam_cont}")
         self.follow_stat = Label(text=f"{follow_cont}")
@@ -1129,6 +1131,10 @@ class C2GUI:
         global yaw
         yaw = 4
 
+    def yaw5(self):
+        global yaw
+        yaw = 5
+
     def status_view(self):
         global gnd_view
         global yaw_view
@@ -1154,6 +1160,8 @@ class C2GUI:
             yaw_view = "180                 "
         elif yaw == 4:
             yaw_view = "270                 "
+        elif yaw == 5:
+            yaw_view = "Viewing Enemy Drone "
 
     def save_speed(self):
         global speed_val
@@ -1187,10 +1195,10 @@ class C2GUI:
     def acoustic_msg(self):
         global toggle_acoustic
         global acoustic_stat
-        if toggle_acoustic == 1:
+        if toggle_acoustic >= 1:
             toggle_acoustic = 0
             acoustic_stat = "Off"
-        elif toggle_acoustic == 0:
+        elif toggle_acoustic <= 0:
             toggle_acoustic = 1
             acoustic_stat = "On"
 

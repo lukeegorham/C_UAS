@@ -1200,6 +1200,7 @@ def parse(packet, packet_type):
                                  '%Y-%m-%d %H:%M:%S')})
 
         if GUI_Master.toggle_acoustic == 1:
+            # print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
             # Begin Sensor Fusion Estimate for Acoustic Pods##
             #  Step 1 Unit conversion to UTM followed by setting reference
             try:
@@ -1234,6 +1235,7 @@ def parse(packet, packet_type):
                     target_filter = Sensor.generate_new_filter_radar(acoustic_est)
                     filter_exists = True
                 else:
+                    print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
                     predicted_state = Sensor.update_with_radar_position_estimate(target_filter, acoustic_est, True)
                     # pulling out the predicted values
                     predictedX = predicted_state.X[0]
@@ -1314,6 +1316,7 @@ def parse(packet, packet_type):
                     #     DiscoveryDroneOffsetalt = predictedUTMZ + 3
                     if (LattimeOffset[0] is not None) & (LongtimeOffset[0] is not None) & (
                             AlttimeOffset[0] is not None):
+                        # print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
                         if filter_id not in DiscoveryDroneOffset_dict:
                             DiscoveryDroneOffset_dict[filter_id] = Discovery_Drone_Offset()
 
@@ -1910,7 +1913,7 @@ def returnToLaunch(linkup):  # Return to home Discovery Drone functon
 
 
 def goToWaypoint(linkup, lat, long, alt, speed):
-    print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
+    # print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
     msgHdr = int("abf2", 16)  # based on message specification
     msgLen = 26  # based on message specification
     msgFormat = '<HHdlllh'  # based on message specification
@@ -1928,7 +1931,7 @@ def goToWaypoint(linkup, lat, long, alt, speed):
         sp = -1
     message.append(np.int16(sp))
     linkup.sendto(struct.pack(msgFormat, *message), (hostD, portD))  # passing waypoint message to port
-    print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
+    # print("YO YO YO YO THIS BE WORKIN. YOU MIGHT BE ON TO SOMETHING. PROBABLY NOT, BUT MAYBE!")
 
 
 def SetRoi(linkup, lat, long, alt):
@@ -2084,7 +2087,7 @@ def sendSensorFusionWaypoint(filter_number):
             SetRoi(senderD, target_lat_correct, target_long_correct, target_alt_correct)
 
         if GUI_Master.followme_select == 1:  # follow me mode selection for True UAV
-            print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
+            # print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
             goToWaypoint(senderD, trueUAVDictionary[True_UAV_Index].UAV_lat - (10 / 111111),
                          trueUAVDictionary[True_UAV_Index].UAV_long,
                          trueUAVDictionary[True_UAV_Index].UAV_alt, 5)
