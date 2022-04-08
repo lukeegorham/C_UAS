@@ -6,10 +6,9 @@ import zmq
 import base64
 
 # Global Variables
-host_gcam = '192.168.1.22'  # Address of receiver
-port_gcam = 46554
+self = '192.168.1.31'  # Address of receiver
+port = 46554
 host_loc = ''
-port_loc_video = 46554
 g_cam = None
 v_feed = None
 
@@ -18,7 +17,11 @@ v_feed = None
 def init_cmd_send():
     global g_cam
     g_cam = socket.socket()
-    g_cam.connect((host_gcam, port_gcam))
+    try:
+        g_cam.connect((self, port))
+    except:
+        print("Connection Refused!")
+        quit()
 
 
 # Listener for Camera Video Feed
@@ -27,7 +30,7 @@ def recv_video():
     global v_feed
     context = zmq.Context()
     v_feed = context.socket(zmq.SUB)
-    v_feed.bind('tcp://*:' + str(port_loc_video))
+    v_feed.bind('tcp://*:' + str(port))
     v_feed.setsockopt_string(zmq.SUBSCRIBE, np.compat.unicode(''))
     # Display Feed
     while True:

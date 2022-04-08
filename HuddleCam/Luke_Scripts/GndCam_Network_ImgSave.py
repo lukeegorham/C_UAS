@@ -58,7 +58,7 @@ def display_daemon():
     
     #CHANGE FOLDER NAME FOR EACH TEST
     RESULT_VID_PATH = "./BlobResults/" ##########
-    a = 0;
+    a = 0
     
     # Get, Show, Then Send Video Frames
     while not connected:
@@ -68,7 +68,7 @@ def display_daemon():
         
         # when we reach the end of the video (file) exit cleanly
         if not ret:
-            keep_processing = False;
+            keep_processing = False
             
         (B, G, R) = cv2.split(image)
         zero = np.zeros(image.shape[:2], dtype = "uint8")
@@ -91,16 +91,16 @@ def display_daemon():
         blueTargets = image.copy()
         blueTargetsCont = blueTargets.copy()
         cv2.drawContours(blueTargetsCont, cnts, -1, (0, 255, 0), 2)
-        (x,y),radius = cv2.minEnclosingCircle(biggestcnt)
-        center = (int(x),int(y))
+        (x, y), radius = cv2.minEnclosingCircle(biggestcnt)
+        center = (int(x), int(y))
         radius = int(radius)
-        cv2.circle(blueTargets,center,radius,(0,0,255),2)
+        cv2.circle(blueTargets, center, radius, (0, 0, 255), 2)
 
         # out.write(blueTargets)
 
         # cv2.imshow("Output", blueTargets)
     
-        key = cv2.waitKey(1) & 0xFF;
+        key = cv2.waitKey(1) & 0xFF
         
         # char = input("Want to screenshot? : ")
 
@@ -119,7 +119,8 @@ def display_daemon():
         encoded, buffer = cv2.imencode('.jpg', blueTargets)
         jpg_as_text = base64.b64encode(buffer)
         
-        # Input Save Code         socket_gs1.send(jpg_as_text)
+        # Input Save Code
+        socket_gs1.send(jpg_as_text)
         
         
         

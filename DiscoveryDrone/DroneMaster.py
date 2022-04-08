@@ -257,13 +257,15 @@ def Ctrl():
         temp=msgIn[0:msgLen]
         msgdata=struct.unpack(msgFormatR,temp)
         #print(msgdata[4])
-        if(msgdata[4] == 1):
+        if(msgdata[4] == 0):
             SendTilt(-90, 0)
-        if(msgdata[4] == 2):
+        elif(msgdata[4] == 1):
             SendTilt(-10, 90)
-        if(msgdata[4] == 3):
+        elif(msgdata[4] == 2):
             SendTilt( 10, 180)
-        if(msgdata[4] == 4):
+        elif(msgdata[4] == 3):
+            SendTilt( 90, 270)
+        elif(msgdata[4] == 4):
             SendTilt( 90, 270)
 
     imageProc = msgdata[5]
